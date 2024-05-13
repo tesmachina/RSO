@@ -1,0 +1,19 @@
+RQ1. Indicator classification and Provenance 
+### CQ1. What is the name of of the indicator ?
+### CQ2. What is the identifier of the indicator?
+### CQ3. Which standard set defines the indicator?
+### CQ4. Which ESG dimension does this indicator measure?
+### CQ5. Which Core topic does this indicator measure?
+### CQ6. Which specific standard and disclosure define this indicator?
+### CQ7. Which topic in the corresponding standard does this indicator measure?
+
+RQ2. requirements of the indicator by standards
+### CQ8. What sustainability variable (object) does the indicator measure?
+### CQ9. What quantity kind does the indicator measure?
+### CQ10. What measurement units are required for this indicator?
+### CQ11. Is this indicator mandatoryly or optionally required by the corresponding standard?
+### CQ12. For the same phenomenon, does the standard requires additional information?
+### CQ13. If yes, what information is required?
+### CQ14. What are information reported by the organization?
+### CQ15. What is the report value of the indicator?  
+ 

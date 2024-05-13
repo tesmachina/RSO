@@ -1,0 +1,15 @@
+PREFIX rso: <https://www.blinded-for-review/rso#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?topic WHERE {
+    {
+        rso:Indicator94_E1-7-53-b rso:measuresGRITopic ?t .
+        ?t a rso:GRITopic.
+    }
+    UNION
+    {
+        rso:Indicator94_E1-7-53-b rso:measuresESRSTopic ?t .
+        ?t a rso:ESRSTopic.
+    }
+    ?t a rso:Topic ;
+       rdfs:label ?topic .
+}
