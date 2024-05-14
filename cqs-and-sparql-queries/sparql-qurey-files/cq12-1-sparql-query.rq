@@ -1,4 +1,0 @@
-PREFIX rso: <https://www.blinded-for-review/rso#>
-ASK  WHERE {
-     rso:Indicator23_305-1-a  rso:hasSiblingIndicator ?s .   
-}

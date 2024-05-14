@@ -1,9 +1,0 @@
-PREFIX rso: <https://www.blinded-for-review/rso#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?indicator ?sibling WHERE {
-	rso:Indicator87_E1-6-45-a rso:hasSiblingIndicator ?s ;
-							  rdfs:label ?indicator .
-	?s a rso:Indicator ;
-	   rdfs:label ?sibling .
-	FILTER (?s != rso:Indicator87_E1-6-45-a)
-}

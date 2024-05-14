@@ -1,0 +1,8 @@
+PREFIX rso: <https://www.blinded-for-review/rso#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?applicability WHERE {
+     rso:Indicator94_E1-7-53-b  rso:hasApplicability ?a .
+     ?a a rso:Applicability ;
+        rdfs:label ?applicability .
+   
+}

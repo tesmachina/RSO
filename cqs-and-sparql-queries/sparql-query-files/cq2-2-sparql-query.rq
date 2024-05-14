@@ -1,0 +1,6 @@
+PREFIX rso: <https://www.blinded-for-review/rso#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+SELECT * WHERE {
+    rso:Indicator94_E1-7-53-b
+               dc:identifier ?identifier .
+}
