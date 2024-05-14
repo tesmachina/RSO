@@ -2,7 +2,7 @@
 
 > All CQs were evaluated using the KG available at [here](../RSO-examples/).
 >
-> All SPARQL queries are available at [here](sparql-query-files/rso_examples_blinded.ttl).
+> All SPARQL queries are available at [here](sparql-query-files).
 > 
 
 > CQs assume the following individuals:
