@@ -13,7 +13,7 @@
 > 
 > Indicator derived from the ESRS standard [ESRS E1](https://www.efrag.org/Assets/Download?assetUrl=%2Fsites%2Fwebpublishing%2FSiteAssets%2F08%2520Draft%2520ESRS%2520E1%2520Climate%2520Change%2520November%25202022.pdf):
 > 
-> ```<http://www.blinded-for-review/rso/Indicator94_E1-7-53-b>```
+> ```<http://www.blinded-for-review/rso/Indicator87_E1-6-45-a>```
 
 
 
@@ -137,7 +137,7 @@ Result for the ESRS indicator:
 ### CQ14. What information is reported by the organization?
 [SPARQL query](sparql-query-files/cq14-sparql-query.rq)
 
-Result for the ESRS indicator:
+Result for the GRI indicator:
 ![result for CQ14](cq-result-screenshots/cq14-result.png)
 
 ### CQ15. What is the report value of the indicator?
@@ -145,9 +145,6 @@ Result for the ESRS indicator:
 
 Result for the GRI indicator:
 ![result for Indicator1](cq-result-screenshots/cq15-1-result.png)
-
-Result for the ESRS indicator:
-![result for Indicator2](cq-result-screenshots/cq15-2-result.png)
 
 ## Part IV. Use case: Indicator mapping and Report Value Reuse
 ### CQ16. What is the corresponding sustainability topic in ESRS for a topic delineated in GRI?

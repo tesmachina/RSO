@@ -1,7 +1,7 @@
 PREFIX rso: <https://www.blinded-for-review/rso#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?indicator ?variabel WHERE {
-     rso:Indicator94_E1-7-53-b  rso:hasMeasurementVariable ?v;
+     rso:Indicator87_E1-6-45-a  rso:hasMeasurementVariable ?v;
                               rdfs:label ?indicator .
     ?v a rso:Variable ;
        rdfs:label ?variabel.

@@ -2,7 +2,7 @@ PREFIX rso: <https://www.blinded-for-review/rso#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX qudt: <http://qudt.org/schema/qudt/>
 SELECT ?indicator ?quantity WHERE {
-     rso:Indicator94_E1-7-53-b  qudt:hasQuantityKind ?q;
+     rso:Indicator87_E1-6-45-a  qudt:hasQuantityKind ?q;
                               rdfs:label ?indicator .
     ?q a qudt:QuantityKind ;
        rdfs:label ?quantity.

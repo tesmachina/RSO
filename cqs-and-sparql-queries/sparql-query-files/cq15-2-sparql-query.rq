@@ -10,8 +10,8 @@ SELECT ?indicator ?value ?number ?unit  WHERE {
         rdfs:label ?value ;
         rso:hasNumericalValue ?number ;
         qudt:hasUnit ?u ;
-        rso:reportsOnIndicator rso:Indicator94_E1-7-53-b .
-    rso:Indicator94_E1-7-53-b rdfs:label ?indicator . 
+        rso:reportsOnIndicator rso:Indicator87_E1-6-45-a .
+    rso:Indicator87_E1-6-45-a rdfs:label ?indicator . 
     ?u rdfs:label ?unit .
     FILTER(LANGMATCHES(LANG(?unit), "en"))
 }

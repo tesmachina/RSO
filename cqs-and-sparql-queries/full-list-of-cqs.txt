@@ -17,3 +17,12 @@ RQ2. requirements of the indicator by standards
 ### CQ14. What are information reported by the organization?
 ### CQ15. What is the report value of the indicator?  
  
+RQ3. Indicator mapping and Report Value Reuse
+### CQ16. What is the corresponding sustainability topic in ESRS for a topic delineated in GRI?
+### CQ17. What are indicators associated with each respective topic in both standards?
+### CQ18. Which indicators in CQ17 overlap in terms of both measuring the same phenomenon and belonging to the same quantity kind?
+### CQ19. Do the overlapping indicators found in CQ18 have distinct requirements in each standard? (unit, applicability)
+### CQ20. Are there any additional disclosure requirements in any standard for the same measurement phenomenon in CQ17? (sibling)
+### CQ21. Are there existing reporting values for overlapping indicators in CQ17 that can be reused irrespective of the required unit?
+### CQ22. Which GRI indicators measure broader phenomena than their corresponding ESRS indicators for the related topic?
+### CQ23. Which ESRS indicators measure broader phenomena than their corresponding GRI indicators for the related topic?
