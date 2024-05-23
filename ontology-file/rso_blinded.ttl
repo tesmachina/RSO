@@ -444,6 +444,7 @@ These breakdown values are linked to specific report values."""@en ;
 ###  https://www.blinded-for-review/rso#CoreEnvironmentTopic
 rso:CoreEnvironmentTopic rdf:type owl:Class ;
                          rdfs:subClassOf rso:CoreTopic ;
+                         rdfs:comment "Individuals of CoreEnvironmentalTopic derive from the GRI standards and represent specific environmental issues. This classification aids in organizing and addressing distinct environmental aspects through targeted indicators."@en ;
                          rdfs:label "Core Environment Topic"@en ;
                          skos:prefLabel "Core Environment Topic"@en .
 
@@ -451,6 +452,7 @@ rso:CoreEnvironmentTopic rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#CoreGovernanceTopic
 rso:CoreGovernanceTopic rdf:type owl:Class ;
                         rdfs:subClassOf rso:CoreTopic ;
+                        rdfs:comment "Individuals of CoreGovernanceTopic are based on the GRI standards and represent unique governance concerns. These topics facilitate the categorization of governance-related indicators, promoting transparency and accountability in corporate governance practices."@en ;
                         rdfs:label "Core Governance Topic"@en ;
                         skos:prefLabel "Core Governance Topic"@en .
 
@@ -458,6 +460,7 @@ rso:CoreGovernanceTopic rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#CoreSocialTopic
 rso:CoreSocialTopic rdf:type owl:Class ;
                     rdfs:subClassOf rso:CoreTopic ;
+                    rdfs:comment "Individuals of CoreSocialTopic are sourced from the GRI standards and encompass specific social issues. This categorization helps in the systematic reporting and evaluation of social topics, focusing on areas such as labor practices, human rights, and community engagement."@en ;
                     rdfs:label "Core Social Topic"@en ;
                     skos:prefLabel "Core Social Topic"@en .
 
@@ -508,18 +511,19 @@ rso:ESGDimension rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#ESRSDisclosureRequirement
 rso:ESRSDisclosureRequirement rdf:type owl:Class ;
                               rdfs:subClassOf rso:Disclosure ;
-                              rdfs:isDefinedBy "https://www.efrag.org/Assets/Download?assetUrl=%2Fsites%2Fwebpublishing%2FSiteAssets%2F06%2520Draft%2520ESRS%25201%2520General%2520requirements%2520November%25202022.pdf"^^xsd:anyURI ;
-                              rdfs:label "ESRS Disclosure Requirement"@en ,
-                                         """ESRS structure the information to be disclosed under Disclosure Requirements.
+                              rdfs:comment """ESRS structure the information to be disclosed under Disclosure Requirements.
 Disclosure Requirements consist of more granular datapoints. The term “datapoint” in this context also refers to a narrative sub-element of a Disclosure Requirement."""@en ;
-                              skos:prefLabel "ESRS Disclosure Requirement"@en ,
-                                             """ESRS structure the information to be disclosed under Disclosure Requirements.
-Disclosure Requirements consist of more granular datapoints. The term “datapoint” in this context also refers to a narrative sub-element of a Disclosure Requirement."""@en .
+                              rdfs:isDefinedBy "https://www.efrag.org/Assets/Download?assetUrl=%2Fsites%2Fwebpublishing%2FSiteAssets%2F06%2520Draft%2520ESRS%25201%2520General%2520requirements%2520November%25202022.pdf"^^xsd:anyURI ;
+                              rdfs:label "ESRS Disclosure Requirement"@en ;
+                              skos:definition """ESRS structure the information to be disclosed under Disclosure Requirements.
+Disclosure Requirements consist of more granular datapoints. The term “datapoint” in this context also refers to a narrative sub-element of a Disclosure Requirement."""@en ;
+                              skos:prefLabel "ESRS Disclosure Requirement"@en .
 
 
 ###  https://www.blinded-for-review/rso#ESRSEnvironmentTopic
 rso:ESRSEnvironmentTopic rdf:type owl:Class ;
                          rdfs:subClassOf rso:ESRSTopic ;
+                         rdfs:comment "ESRS topics derived from the ESRS standards describing the environmental dimension."@en ;
                          rdfs:label "ESRS Environment Topic"@en ;
                          skos:prefLabel "ESRS Environment Topic"@en .
 
@@ -527,13 +531,16 @@ rso:ESRSEnvironmentTopic rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#ESRSGovernanceTopic
 rso:ESRSGovernanceTopic rdf:type owl:Class ;
                         rdfs:subClassOf rso:ESRSTopic ;
+                        rdfs:comment "ESRS topics derived from the ESRS standards describing the governance dimension."@en ;
                         rdfs:label "ESRS Governance Topic"@en ;
                         skos:prefLabel "ESRS Governance Topic"@en .
 
 
 ###  https://www.blinded-for-review/rso#ESRSIndicator
 rso:ESRSIndicator rdf:type owl:Class ;
+                  rdfs:subClassOf rso:Indicator ;
                   owl:disjointWith rso:GRIIndicator ;
+                  rdfs:comment "Indicators derived from the ESRS standards."@en ;
                   rdfs:label "ESRS Indicator"@en ;
                   skos:prefLabel "ESRS Indicator"@en .
 
@@ -541,6 +548,7 @@ rso:ESRSIndicator rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#ESRSSocialTopic
 rso:ESRSSocialTopic rdf:type owl:Class ;
                     rdfs:subClassOf rso:ESRSTopic ;
+                    rdfs:comment "ESRS topics derived from the ESRS standards describing the social dimension."@en ;
                     rdfs:label "ESRS Social Topic"@en ;
                     skos:prefLabel "ESRS Social Topic"@en .
 
@@ -548,6 +556,7 @@ rso:ESRSSocialTopic rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#ESRSStandard
 rso:ESRSStandard rdf:type owl:Class ;
                  rdfs:subClassOf rso:Standard ;
+                 rdfs:comment "A piece of the sustainability reporting standard derived from the ESRS."@en ;
                  rdfs:label "ESRS Standard"@en ;
                  skos:prefLabel "ESRS Standard"@en .
 
@@ -564,6 +573,7 @@ rso:ESRSTopic rdf:type owl:Class ;
 rso:ESRSTopicalStandard rdf:type owl:Class ;
                         rdfs:subClassOf rso:ESRSStandard ;
                         owl:disjointWith rso:ESRSUniversalStandard ;
+                        rdfs:comment "ESRS topical standards provide detailed disclosure requirements across environmental (E), social (S), and governance (G) topics. Environmental (E) topic focus on aspects related to environmental impact, such as climate change, biodiversity, and resource use. Social (S) standards address social matters, including human rights, labor practices, and community engagement.Governance (G) standards pertain to governance practices, board structures, and transparency."@en ;
                         rdfs:label "ESRS Topical Standard"@en ;
                         skos:prefLabel "ESRS Topical Standard"@en .
 
@@ -571,6 +581,7 @@ rso:ESRSTopicalStandard rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#ESRSUniversalStandard
 rso:ESRSUniversalStandard rdf:type owl:Class ;
                           rdfs:subClassOf rso:ESRSStandard ;
+                          rdfs:comment "ESRS universal standards provide general reporting concepts and overarching disclosure requirements that apply across all undertakings, regardless of the sector they operate in."@en ;
                           rdfs:label "ESRS Universal Standard"@en ;
                           skos:prefLabel "ESRS Universal Standard"@en .
 
@@ -649,6 +660,7 @@ credibly."""@en ;
 ###  https://www.blinded-for-review/rso#GRIEnvironmentTopic
 rso:GRIEnvironmentTopic rdf:type owl:Class ;
                         rdfs:subClassOf rso:GRITopic ;
+                        rdfs:comment "GRI topics derived from the GRI standards describing the environmental dimension."@en ;
                         rdfs:label "GRI Environment Topic"@en ;
                         skos:prefLabel "GRI Environment Topic"@en .
 
@@ -656,12 +668,15 @@ rso:GRIEnvironmentTopic rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#GRIGovernanceTopic
 rso:GRIGovernanceTopic rdf:type owl:Class ;
                        rdfs:subClassOf rso:GRITopic ;
+                       rdfs:comment "GRI topics derived from the GRI standards describing the governance dimension."@en ;
                        rdfs:label "GRI Governance Topic"@en ;
                        skos:prefLabel "GRI Governance Topic"@en .
 
 
 ###  https://www.blinded-for-review/rso#GRIIndicator
 rso:GRIIndicator rdf:type owl:Class ;
+                 rdfs:subClassOf rso:Indicator ;
+                 rdfs:comment "Indicators derived from the GRI standards."@en ;
                  rdfs:label "GRI Indicator"@en ;
                  skos:prefLabel "GRI Indicator"@en .
 
@@ -669,6 +684,7 @@ rso:GRIIndicator rdf:type owl:Class ;
 ###  https://www.blinded-for-review/rso#GRISocialTopic
 rso:GRISocialTopic rdf:type owl:Class ;
                    rdfs:subClassOf rso:GRITopic ;
+                   rdfs:comment "GRI topics derived from the GRI standards describing the social dimension."@en ;
                    rdfs:label "GRI Social Topic"@en ;
                    skos:prefLabel "GRI Social Topic"@en .
 
@@ -809,6 +825,7 @@ rso:Topic rdf:type owl:Class ;
 
 ###  https://www.blinded-for-review/rso#Value
 rso:Value rdf:type owl:Class ;
+          rdfs:comment "This class acts as a collective framework for organizing quantitative data within sustainability reports. It encompasses two subclasses:(1) ReportValue, which structures individual data entries including numerical values and units linked to specific indicators, and (2) BreakdownValue, which allows for detailed disaggregation of data according to defined criteria, enhancing data analysis and reporting precision."@en ;
           rdfs:label "Value"@en ;
           skos:prefLabel "Value"@en .
 
@@ -932,4 +949,4 @@ rso:optional rdf:type owl:NamedIndividual ,
 ] .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
