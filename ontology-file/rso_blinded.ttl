@@ -441,6 +441,679 @@ These breakdown values are linked to specific report values."""@en ;
                    skos:prefLabel "Break Down Value"@en .
 
 
+###  https://www.blinded-for-review/rso#ConsumedEnergy
+rso:ConsumedEnergy rdf:type owl:Class ;
+                   rdfs:subClassOf rso:EnergyVariable ;
+                   rdfs:comment "Variables (measurement objects) regarding consumed energy."@en ;
+                   rdfs:label "Consumed Energy"@en ;
+                   skos:prefLabel "Consumed Energy"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedEnergyIndicator
+rso:ConsumedEnergyIndicator rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( rso:EnergyIndicator
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty rso:hasMeasurementVariable ;
+                                                                         owl:someValuesFrom rso:ConsumedEnergy
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:comment "Indicator that measures the consumed energy subtopic."@en ;
+                            rdfs:label "Consumed Energy Indicator"@en ;
+                            skos:prefLabel "Consumed Energy Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedCooling
+rso:ConsumedPurchasedCooling rdf:type owl:Class ;
+                             rdfs:subClassOf rso:ConsumedPurchasedSecondaryEnergy ;
+                             rdfs:comment "Variables (measurement objects) regarding consumed purchased cooling."@en ;
+                             rdfs:label "Consumed Purchased Cooling"@en ;
+                             skos:prefLabel "Consumed Purchased Cooling"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedCoolingFromNonRenewableSource
+rso:ConsumedPurchasedCoolingFromNonRenewableSource rdf:type owl:Class ;
+                                                   rdfs:subClassOf rso:ConsumedPurchasedCooling ;
+                                                   owl:disjointWith rso:ConsumedPurchasedCoolingFromRenewableSource ;
+                                                   rdfs:comment "Variables (measurement objects) regarding consumed purchased cooling from non-renewable sources."@en ;
+                                                   rdfs:label "Consumed Purchased Cooling From Non-Renewable Source"@en ;
+                                                   skos:prefLabel "Consumed Purchased Cooling From Non-Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedCoolingFromNonRenewableSourceIndicator
+rso:ConsumedPurchasedCoolingFromNonRenewableSourceIndicator rdf:type owl:Class ;
+                                                            owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedCoolingIndicator
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                         owl:someValuesFrom rso:ConsumedPurchasedCoolingFromNonRenewableSource
+                                                                                                       ]
+                                                                                                     ) ;
+                                                                                  rdf:type owl:Class
+                                                                                ] ;
+                                                            rdfs:comment "Indicator that measures the consumed purchased cooling from non-renewable source subtopic."@en ;
+                                                            rdfs:label "Consumed Purchased Cooling From Non-Renewable Source Indicator"@en ;
+                                                            skos:prefLabel "Consumed Purchased Cooling From Non-Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedCoolingFromRenewableSource
+rso:ConsumedPurchasedCoolingFromRenewableSource rdf:type owl:Class ;
+                                                rdfs:subClassOf rso:ConsumedPurchasedCooling ;
+                                                rdfs:comment "Variables (measurement objects) regarding consumed purchased cooling from renewable sources."@en ;
+                                                rdfs:label "Consumed Purchased Cooling From Renewable Source"@en ;
+                                                skos:prefLabel "Consumed Purchased Cooling From Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedCoolingFromRenewableSourceIndicator
+rso:ConsumedPurchasedCoolingFromRenewableSourceIndicator rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedCoolingIndicator
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                      owl:someValuesFrom rso:ConsumedPurchasedCoolingFromRenewableSource
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:comment "Indicator that measures the consumed purchased cooling from renewable source subtopic."@en ;
+                                                         rdfs:label "Consumed Purchased Cooling From Renewable Source Indicator"@en ;
+                                                         skos:prefLabel "Consumed Purchased Cooling From Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedCoolingIndicator
+rso:ConsumedPurchasedCoolingIndicator rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedSecondaryEnergyIndicator
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty rso:hasMeasurementVariable ;
+                                                                                   owl:someValuesFrom rso:ConsumedPurchasedCooling
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:comment "Indicator that measures the consumed purchased cooling subtopic."@en ;
+                                      rdfs:label "Consumed Purchased Cooling Indicator"@en ;
+                                      skos:prefLabel "Consumed Purchased Cooling Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedElectricity
+rso:ConsumedPurchasedElectricity rdf:type owl:Class ;
+                                 rdfs:subClassOf rso:ConsumedPurchasedSecondaryEnergy ;
+                                 rdfs:comment "Variables (measurement objects) regarding consumed purchased electricity."@en ;
+                                 rdfs:label "Consumed Purchased Electricity"@en ;
+                                 skos:prefLabel "Consumed Purchased Electricity"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedElectricityFromNonRenewableSource
+rso:ConsumedPurchasedElectricityFromNonRenewableSource rdf:type owl:Class ;
+                                                       rdfs:subClassOf rso:ConsumedPurchasedElectricity ;
+                                                       owl:disjointWith rso:ConsumedPurchasedElectricityFromRenewableSource ;
+                                                       rdfs:comment "Variables (measurement objects) regarding consumed purchased electricity from non-renewable sources."@en ;
+                                                       rdfs:label "Consumed Purchased Electricity From Non-Renewable Source"@en ;
+                                                       skos:prefLabel "Consumed Purchased Electricity From Non-Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedElectricityFromNonRenewableSourceIndicator
+rso:ConsumedPurchasedElectricityFromNonRenewableSourceIndicator rdf:type owl:Class ;
+                                                                owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedElectricityIndicator
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                             owl:someValuesFrom rso:ConsumedPurchasedHeatingFromNonRenewableSource
+                                                                                                           ]
+                                                                                                         ) ;
+                                                                                      rdf:type owl:Class
+                                                                                    ] ;
+                                                                rdfs:comment "Indicator that measures the consumed purchased electricity from non-renewable source subtopic."@en ;
+                                                                rdfs:label "Consumed Purchased Electricity From Non-Renewable Source Indicator"@en ;
+                                                                skos:prefLabel "Consumed Purchased Electricity From Non-Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedElectricityFromRenewableSource
+rso:ConsumedPurchasedElectricityFromRenewableSource rdf:type owl:Class ;
+                                                    rdfs:subClassOf rso:ConsumedPurchasedElectricity ;
+                                                    rdfs:comment "Variables (measurement objects) regarding consumed purchased electricity from renewable sources."@en ;
+                                                    rdfs:label "Consumed Purchased Electricity From Renewable Source"@en ;
+                                                    skos:prefLabel "Consumed Purchased Electricity From Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedElectricityFromRenewableSourceIndicator
+rso:ConsumedPurchasedElectricityFromRenewableSourceIndicator rdf:type owl:Class ;
+                                                             owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedElectricityIndicator
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                          owl:someValuesFrom rso:ConsumedPurchasedElectricityFromRenewableSource
+                                                                                                        ]
+                                                                                                      ) ;
+                                                                                   rdf:type owl:Class
+                                                                                 ] ;
+                                                             rdfs:comment "Indicator that measures the consumed purchased electricity from renewable source subtopic."@en ;
+                                                             rdfs:label "Consumed Purchased Electricity From Renewable Source Indicator"@en ;
+                                                             skos:prefLabel "Consumed Purchased Electricity From Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedElectricityIndicator
+rso:ConsumedPurchasedElectricityIndicator rdf:type owl:Class ;
+                                          owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedSecondaryEnergyIndicator
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty rso:hasMeasurementVariable ;
+                                                                                       owl:someValuesFrom rso:ConsumedPurchasedElectricity
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ] ;
+                                          rdfs:comment "Indicator that measures the consumed from purchased electricity subtopic."@en ;
+                                          rdfs:label "Consumed Purchased Electricity Indicator"@en ;
+                                          skos:prefLabel "Consumed Purchased Electricity Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedEnergy
+rso:ConsumedPurchasedEnergy rdf:type owl:Class ;
+                            rdfs:subClassOf rso:ConsumedEnergy ;
+                            rdfs:comment "Variables (measurement objects) regarding consumed purchased energy."@en ;
+                            rdfs:label "Consumed Purchased Energy"@en ;
+                            skos:prefLabel "Consumed Purchased Energy"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedEnergyIndicator
+rso:ConsumedPurchasedEnergyIndicator rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedEnergyIndicator
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty rso:hasMeasurementVariable ;
+                                                                                  owl:someValuesFrom rso:ConsumedPurchasedEnergy
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     rdfs:comment "Indicator that measures the consumed from purchased energy subtopic."@en ;
+                                     rdfs:label "Consumed Purchased Energy Indicator"@en ;
+                                     skos:prefLabel "Consumed Purchased Energy Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuel
+rso:ConsumedPurchasedFuel rdf:type owl:Class ;
+                          rdfs:subClassOf rso:ConsumedPurchasedEnergy ;
+                          owl:disjointWith rso:ConsumedPurchasedSecondaryEnergy ;
+                          rdfs:comment "Variables (measurement objects) regarding consumed purchased first-level energy (fuel)."@en ;
+                          rdfs:label "Consumed Purchased Fuel"@en ;
+                          skos:prefLabel "Consumed Purchased Fuel"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromBiomass
+rso:ConsumedPurchasedFuelFromBiomass rdf:type owl:Class ;
+                                     rdfs:subClassOf rso:ConsumedPurchasedFuelFromRenewableSource ;
+                                     rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from biomass."@en ;
+                                     rdfs:label "Consumed Purchased Fuel From Biomass"@en ;
+                                     skos:prefLabel "Consumed Purchased Fuel From Biomass"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromBiomassIndicator
+rso:ConsumedPurchasedFuelFromBiomassIndicator rdf:type owl:Class ;
+                                              owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromRenewableSourceIndicator
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty rso:hasMeasurementVariable ;
+                                                                                           owl:someValuesFrom rso:ConsumedPurchasedFuelFromBiomass
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ] ;
+                                              rdfs:comment "Indicator that measures the consumed from purchased fuel from biomass subtopic."@en ;
+                                              rdfs:label "Consumed Purchased Fuel From Biomass Indicator"@en ;
+                                              skos:prefLabel "Consumed Purchased Fuel From Biomass Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromCoalAndCoalProduct
+rso:ConsumedPurchasedFuelFromCoalAndCoalProduct rdf:type owl:Class ;
+                                                rdfs:subClassOf rso:ConsumedPurchasedFuelFromNonRenewableSource ;
+                                                rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from coal and coal product."@en ;
+                                                rdfs:label "Consumed Purchased Fuel From Coal And Coal Product"@en ;
+                                                skos:prefLabel "Consumed Purchased Fuel From Coal And Coal Product"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromCoalAndCoalProductIndicator
+rso:ConsumedPurchasedFuelFromCoalAndCoalProductIndicator rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromNonRenewableSourceIndicator
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                      owl:someValuesFrom rso:ConsumedPurchasedFuelFromCoalAndCoalProduct
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:comment "Indicator that measures the consumed from purchased fuel from coal and coal products subtopic."@en ;
+                                                         rdfs:label "Consumed Purchased Fuel From Coal And Coal Product Indicator"@en ;
+                                                         skos:prefLabel "Consumed Purchased Fuel From Coal And Coal Product Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromCrudeOilAndPetroleumProducts
+rso:ConsumedPurchasedFuelFromCrudeOilAndPetroleumProducts rdf:type owl:Class ;
+                                                          rdfs:subClassOf rso:ConsumedPurchasedFuelFromNonRenewableSource ;
+                                                          rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from crude oil and petroleum products."@en ;
+                                                          rdfs:label "Consumed Purchased Fuel From Crude Oil And Petroleum Products"@en ;
+                                                          skos:prefLabel "Consumed Purchased Fuel From Crude Oil And Petroleum Products"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromCrudeOilAndPetroleumProductsIndicator
+rso:ConsumedPurchasedFuelFromCrudeOilAndPetroleumProductsIndicator rdf:type owl:Class ;
+                                                                   owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromNonRenewableSourceIndicator
+                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                                owl:someValuesFrom rso:ConsumedPurchasedFuelFromCrudeOilAndPetroleumProducts
+                                                                                                              ]
+                                                                                                            ) ;
+                                                                                         rdf:type owl:Class
+                                                                                       ] ;
+                                                                   rdfs:comment "Indicator that measures the consumed from purchased fuel from crude oil and petroleum products subtopic."@en ;
+                                                                   rdfs:label "Consumed Purchased Fuel From Crude Oil And Petroleum Products Indicator"@en ;
+                                                                   skos:prefLabel "Consumed Purchased Fuel From Crude Oil And Petroleum Products Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromGeothermal
+rso:ConsumedPurchasedFuelFromGeothermal rdf:type owl:Class ;
+                                        rdfs:subClassOf rso:ConsumedPurchasedFuelFromRenewableSource ;
+                                        rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from geothermal."@en ;
+                                        rdfs:label "Consumed Purchased Fuel From Geothermal"@en ;
+                                        skos:prefLabel "Consumed Purchased Fuel From Geothermal"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromGeothermalIndicator
+rso:ConsumedPurchasedFuelFromGeothermalIndicator rdf:type owl:Class ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromRenewableSourceIndicator
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty rso:hasMeasurementVariable ;
+                                                                                              owl:someValuesFrom rso:ConsumedPurchasedFuelFromGeothermal
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:comment "Indicator that measures the consumed from purchased fuel from geothermal subtopic."@en ;
+                                                 rdfs:label "Consumed Purchased Fuel From Geothermal Indicator"@en ;
+                                                 skos:prefLabel "Consumed Purchased Fuel From Geothermal Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromHydro
+rso:ConsumedPurchasedFuelFromHydro rdf:type owl:Class ;
+                                   rdfs:subClassOf rso:ConsumedPurchasedFuelFromRenewableSource ;
+                                   rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from hydro."@en ;
+                                   rdfs:label "Consumed Purchased Fuel From Hydro"@en ;
+                                   skos:prefLabel "Consumed Purchased Fuel From Hydro"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromHydroIndicator
+rso:ConsumedPurchasedFuelFromHydroIndicator rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromRenewableSourceIndicator
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty rso:hasMeasurementVariable ;
+                                                                                         owl:someValuesFrom rso:ConsumedPurchasedFuelFromHydro
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:comment "Indicator that measures the consumed from purchased fuel from hydro subtopic."@en ;
+                                            rdfs:label "Consumed Purchased Fuel From Hydro Indicator"@en ;
+                                            skos:prefLabel "Consumed Purchased Fuel From Hydro Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromNaturalGas
+rso:ConsumedPurchasedFuelFromNaturalGas rdf:type owl:Class ;
+                                        rdfs:subClassOf rso:ConsumedPurchasedFuelFromNonRenewableSource ;
+                                        rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from natural gas."@en ;
+                                        rdfs:label "Consumed Purchased Fuel From Natural Gas"@en ;
+                                        skos:prefLabel "Consumed Purchased Fuel From Natural Gas"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromNaturalGasIndicator
+rso:ConsumedPurchasedFuelFromNaturalGasIndicator rdf:type owl:Class ;
+                                                 owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromNonRenewableSourceIndicator
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty rso:hasMeasurementVariable ;
+                                                                                              owl:someValuesFrom rso:ConsumedPurchasedFuelFromNaturalGas
+                                                                                            ]
+                                                                                          ) ;
+                                                                       rdf:type owl:Class
+                                                                     ] ;
+                                                 rdfs:comment "Indicator that measures the consumed from purchased fuel natural gas subtopic."@en ;
+                                                 rdfs:label "Consumed Purchased Fuel From Natural Gas Indicator"@en ;
+                                                 skos:prefLabel "Consumed Purchased Fuel From Natural Gas Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromNonRenewableSource
+rso:ConsumedPurchasedFuelFromNonRenewableSource rdf:type owl:Class ;
+                                                rdfs:subClassOf rso:ConsumedPurchasedFuel ;
+                                                owl:disjointWith rso:ConsumedPurchasedFuelFromRenewableSource ;
+                                                rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from non-renewable source, which refers to energy source that cannot be replenished, reproduced, grown or generated in a short time period through ecological cycles or agricultural processes."@en ;
+                                                rdfs:label "Consumed Purchased Fuel From Non-Renewable Source"@en ;
+                                                skos:prefLabel "Consumed Purchased Fuel From Non-Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromNonRenewableSourceIndicator
+rso:ConsumedPurchasedFuelFromNonRenewableSourceIndicator rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelIndicator
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                      owl:someValuesFrom rso:ConsumedPurchasedFuelFromNonRenewableSource
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:comment "Indicator that measures the consumed from purchased fuel from non-renewable sources subtopic."@en ;
+                                                         rdfs:label "Consumed Purchased Fuel From Non-Renewable Source Indicator"@en ;
+                                                         skos:prefLabel "Consumed Purchased Fuel From Non-Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromNuclearProduct
+rso:ConsumedPurchasedFuelFromNuclearProduct rdf:type owl:Class ;
+                                            rdfs:subClassOf rso:ConsumedPurchasedFuelFromNonRenewableSource ;
+                                            rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from nuclear product."@en ;
+                                            rdfs:label "Consumed Purchased Fuel From Nuclear Product"@en ;
+                                            skos:prefLabel "Consumed Purchased Fuel From Nuclear Product"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromNuclearProductIndicator
+rso:ConsumedPurchasedFuelFromNuclearProductIndicator rdf:type owl:Class ;
+                                                     owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromNonRenewableSourceIndicator
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                  owl:someValuesFrom rso:ConsumedPurchasedFuelFromNuclearProduct
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ] ;
+                                                     rdfs:comment "Indicator that measures the consumed from purchased nuclear products subtopic."@en ;
+                                                     rdfs:label "Consumed Purchased Fuel From Nuclear Product Indicator"@en ;
+                                                     skos:prefLabel "Consumed Purchased Fuel From Nuclear Product Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromOtherNon-renewableSources
+rso:ConsumedPurchasedFuelFromOtherNon-renewableSources rdf:type owl:Class ;
+                                                       rdfs:subClassOf rso:ConsumedPurchasedFuelFromNonRenewableSource ;
+                                                       rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from other non-renewable sources."@en ;
+                                                       rdfs:label "Consumed Purchased Fuel From Other Non-renewable Sources"@en ;
+                                                       skos:prefLabel "Consumed Purchased Fuel From Other Non-renewable Sources"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromOtherNon-renewableSourcesIndicator
+rso:ConsumedPurchasedFuelFromOtherNon-renewableSourcesIndicator rdf:type owl:Class ;
+                                                                owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromNonRenewableSourceIndicator
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                             owl:someValuesFrom rso:ConsumedPurchasedFuelFromOtherNon-renewableSources
+                                                                                                           ]
+                                                                                                         ) ;
+                                                                                      rdf:type owl:Class
+                                                                                    ] ;
+                                                                rdfs:comment "Indicator that measures the consumed from other non-renewable sources subtopic."@en ;
+                                                                rdfs:label "Consumed Purchased Fuel From Other Non-renewable Sources Indicator"@en ;
+                                                                skos:prefLabel "Consumed Purchased Fuel From Other Non-renewable Sources Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromRenewableSource
+rso:ConsumedPurchasedFuelFromRenewableSource rdf:type owl:Class ;
+                                             rdfs:subClassOf rso:ConsumedPurchasedFuel ;
+                                             rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from renewable source, which refers to energy source that is capable of being replenished in a short time through ecological cycles or agricultural processes."@en ;
+                                             rdfs:label "Consumed Purchased Fuel From Renewable Source"@en ;
+                                             skos:prefLabel "Consumed Purchased Fuel From Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromRenewableSourceIndicator
+rso:ConsumedPurchasedFuelFromRenewableSourceIndicator rdf:type owl:Class ;
+                                                      owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelIndicator
+                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                   owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                   owl:someValuesFrom rso:ConsumedPurchasedFuelFromRenewableSource
+                                                                                                 ]
+                                                                                               ) ;
+                                                                            rdf:type owl:Class
+                                                                          ] ;
+                                                      rdfs:comment "Indicator that measures the consumed from purchased fuel from renewable sources subtopic."@en ;
+                                                      rdfs:label "Consumed Purchased Fuel From Renewable Source Indicator"@en ;
+                                                      skos:prefLabel "Consumed Purchased Fuel From Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromSolar
+rso:ConsumedPurchasedFuelFromSolar rdf:type owl:Class ;
+                                   rdfs:subClassOf rso:ConsumedPurchasedFuelFromRenewableSource ;
+                                   rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from solar."@en ;
+                                   rdfs:label "Consumed Purchased Fuel From Solar"@en ;
+                                   skos:prefLabel "Consumed Purchased Fuel From Solar"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromSolarIndicator
+rso:ConsumedPurchasedFuelFromSolarIndicator rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromRenewableSourceIndicator
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty rso:hasMeasurementVariable ;
+                                                                                         owl:someValuesFrom rso:ConsumedPurchasedFuelFromSolar
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:comment "Indicator that measures the consumed from purchased fuel from solar subtopic."@en ;
+                                            rdfs:label "Consumed Purchased Fuel From Solar Indicator"@en ;
+                                            skos:prefLabel "Consumed Purchased Fuel From Solar Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromWind
+rso:ConsumedPurchasedFuelFromWind rdf:type owl:Class ;
+                                  rdfs:subClassOf rso:ConsumedPurchasedFuelFromRenewableSource ;
+                                  rdfs:comment "Variables (measurement objects) regarding consumed purchased fuel from wind."@en ;
+                                  rdfs:label "Consumed Purchased Fuel From Wind"@en ;
+                                  skos:prefLabel "Consumed Purchased Fuel From Wind"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelFromWindIndicator
+rso:ConsumedPurchasedFuelFromWindIndicator rdf:type owl:Class ;
+                                           owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedFuelFromRenewableSourceIndicator
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty rso:hasMeasurementVariable ;
+                                                                                        owl:someValuesFrom rso:ConsumedPurchasedFuelFromWind
+                                                                                      ]
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
+                                                               ] ;
+                                           rdfs:comment "Indicator that measures the consumed from purchased fuel from wind subtopic."@en ;
+                                           rdfs:label "Consumed Purchased Fuel From Wind Indicator"@en ;
+                                           skos:prefLabel "Consumed Purchased Fuel From Wind Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedFuelIndicator
+rso:ConsumedPurchasedFuelIndicator rdf:type owl:Class ;
+                                   owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedEnergyIndicator
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty rso:hasMeasurementVariable ;
+                                                                                owl:someValuesFrom rso:ConsumedPurchasedFuel
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
+                                   rdfs:comment "Indicator that measures the consumed from purchased fuel (first-level energy) subtopic."@en ;
+                                   rdfs:label "Consumed Purchased Fuel Indicator"@en ;
+                                   skos:prefLabel "Consumed Purchased Fuel Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedHeating
+rso:ConsumedPurchasedHeating rdf:type owl:Class ;
+                             rdfs:subClassOf rso:ConsumedPurchasedSecondaryEnergy ;
+                             rdfs:comment "Variables (measurement objects) regarding consumed purchased heating."@en ;
+                             rdfs:label "Consumed Purchased Heating"@en ;
+                             skos:prefLabel "Consumed Purchased Heating"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedHeatingFromNonRenewableSource
+rso:ConsumedPurchasedHeatingFromNonRenewableSource rdf:type owl:Class ;
+                                                   rdfs:subClassOf rso:ConsumedPurchasedHeating ;
+                                                   owl:disjointWith rso:ConsumedPurchasedHeatingFromRenewableSource ;
+                                                   rdfs:comment "Variables (measurement objects) regarding consumed purchased heating from non-renewable sources."@en ;
+                                                   rdfs:label "Consumed Purchased Heating From Non-Renewable Source"@en ;
+                                                   skos:prefLabel "Consumed Purchased Heating From Non-Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedHeatingFromNonRenewableSourceIndicator
+rso:ConsumedPurchasedHeatingFromNonRenewableSourceIndicator rdf:type owl:Class ;
+                                                            owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedHeatingIndicator
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                         owl:someValuesFrom rso:ConsumedPurchasedHeatingFromNonRenewableSource
+                                                                                                       ]
+                                                                                                     ) ;
+                                                                                  rdf:type owl:Class
+                                                                                ] ;
+                                                            rdfs:comment "Indicator that measures the consumed purchased heating from non-renewable source subtopic."@en ;
+                                                            rdfs:label "Consumed Purchased Heating From Non-Renewable Source Indicator"@en ;
+                                                            skos:prefLabel "Consumed Purchased Heating From Non-Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedHeatingFromRenewableSource
+rso:ConsumedPurchasedHeatingFromRenewableSource rdf:type owl:Class ;
+                                                rdfs:subClassOf rso:ConsumedPurchasedHeating ;
+                                                rdfs:comment "Variables (measurement objects) regarding consumed purchased heating from renewable sources."@en ;
+                                                rdfs:label "Consumed Purchased Heating From Renewable Source"@en ;
+                                                skos:prefLabel "Consumed Purchased Heating From Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedHeatingFromRenewableSourceIndicator
+rso:ConsumedPurchasedHeatingFromRenewableSourceIndicator rdf:type owl:Class ;
+                                                         owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedHeatingIndicator
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                      owl:someValuesFrom rso:ConsumedPurchasedHeatingFromRenewableSource
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                         rdfs:comment "Indicator that measures the consumed purchased heating from renewable source subtopic."@en ;
+                                                         rdfs:label "Consumed Purchased Heating From Renewable Source Indicator"@en ;
+                                                         skos:prefLabel "Consumed Purchased Heating From Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedHeatingIndicator
+rso:ConsumedPurchasedHeatingIndicator rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedSecondaryEnergyIndicator
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty rso:hasMeasurementVariable ;
+                                                                                   owl:someValuesFrom rso:ConsumedPurchasedHeating
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:comment "Indicator that measures the consumed from purchased heating subtopic."@en ;
+                                      rdfs:label "Consumed Purchased Heating Indicator"@en ;
+                                      skos:prefLabel "Consumed Purchased Heating Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedSecondaryEnergy
+rso:ConsumedPurchasedSecondaryEnergy rdf:type owl:Class ;
+                                     rdfs:subClassOf rso:ConsumedPurchasedEnergy ;
+                                     rdfs:comment "Variables (measurement objects) regarding consumed purchased secondary energy."@en ;
+                                     rdfs:label "Consumed Purchased Secondary Energy"@en ;
+                                     skos:prefLabel "Consumed Purchased Secondary Energy"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedSecondaryEnergyIndicator
+rso:ConsumedPurchasedSecondaryEnergyIndicator rdf:type owl:Class ;
+                                              owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedEnergyIndicator
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty rso:hasMeasurementVariable ;
+                                                                                           owl:someValuesFrom rso:ConsumedPurchasedSecondaryEnergy
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ] ;
+                                              rdfs:comment "Indicator that measures the consumed from purchased secondary energy subtopic."@en ;
+                                              rdfs:label "Consumed Purchased Secondary Energy Indicator"@en ;
+                                              skos:prefLabel "Consumed Purchased Secondary Energy Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedSteam
+rso:ConsumedPurchasedSteam rdf:type owl:Class ;
+                           rdfs:subClassOf rso:ConsumedPurchasedSecondaryEnergy ;
+                           rdfs:comment "Variables (measurement objects) regarding consumed purchased steam."@en ;
+                           rdfs:label "Consumed Purchased Steam"@en ;
+                           skos:prefLabel "Consumed Purchased Steam"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedSteamFromNonRenewableSource
+rso:ConsumedPurchasedSteamFromNonRenewableSource rdf:type owl:Class ;
+                                                 rdfs:subClassOf rso:ConsumedPurchasedSteam ;
+                                                 owl:disjointWith rso:ConsumedPurchasedSteamFromRenewableSource ;
+                                                 rdfs:comment "Variables (measurement objects) regarding consumed purchased steam from non-renewable sources."@en ;
+                                                 rdfs:label "Consumed Purchased Steam From Non-Renewable Source"@en ;
+                                                 skos:prefLabel "Consumed Purchased Steam From Non-Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedSteamFromNonRenewableSourceIndicator
+rso:ConsumedPurchasedSteamFromNonRenewableSourceIndicator rdf:type owl:Class ;
+                                                          owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedSteamIndicator
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                       owl:someValuesFrom rso:ConsumedPurchasedSteamFromNonRenewableSource
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ;
+                                                          rdfs:comment "Indicator that measures the consumed purchased steam from non-renewable source subtopic."@en ;
+                                                          rdfs:label "Consumed Purchased Steam From Non-Renewable Source Indicator"@en ;
+                                                          skos:prefLabel "Consumed Purchased Steam From Non-Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedSteamFromRenewableSource
+rso:ConsumedPurchasedSteamFromRenewableSource rdf:type owl:Class ;
+                                              rdfs:subClassOf rso:ConsumedPurchasedSteam ;
+                                              rdfs:comment "Variables (measurement objects) regarding consumed purchased steam from renewable sources."@en ;
+                                              rdfs:label "Consumed Purchased Steam From Renewable Source"@en ;
+                                              skos:prefLabel "Consumed Purchased Steam From Renewable Source"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedSteamFromRenewableSourceIndicator
+rso:ConsumedPurchasedSteamFromRenewableSourceIndicator rdf:type owl:Class ;
+                                                       owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedSteamIndicator
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                    owl:someValuesFrom rso:ConsumedPurchasedSteamFromRenewableSource
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ] ;
+                                                       rdfs:comment "Indicator that measures the consumed purchased steam from renewable source subtopic."@en ;
+                                                       rdfs:label "Consumed Purchased Steam From Renewable Source Indicator"@en ;
+                                                       skos:prefLabel "Consumed Purchased Steam From Renewable Source Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedPurchasedSteamIndicator
+rso:ConsumedPurchasedSteamIndicator rdf:type owl:Class ;
+                                    owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedPurchasedSecondaryEnergyIndicator
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty rso:hasMeasurementVariable ;
+                                                                                 owl:someValuesFrom rso:ConsumedPurchasedSteam
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                    rdfs:comment "Indicator that measures the consumed from purchased steam subtopic."@en ;
+                                    rdfs:label "Consumed Purchased Steam Indicator"@en ;
+                                    skos:prefLabel "Consumed Purchased Steam Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedSelfGeneratedEnergy
+rso:ConsumedSelfGeneratedEnergy rdf:type owl:Class ;
+                                rdfs:subClassOf rso:ConsumedEnergy ;
+                                rdfs:comment "Variables (measurement objects) regarding consumed self-generated energy"@en ;
+                                rdfs:label "Consumed Self Generated Energy"@en ;
+                                skos:prefLabel "Consumed Self Generated Energy"@en .
+
+
+###  https://www.blinded-for-review/rso#ConsumedSelfGeneratedEnergyIndicator
+rso:ConsumedSelfGeneratedEnergyIndicator rdf:type owl:Class ;
+                                         owl:equivalentClass [ owl:intersectionOf ( rso:ConsumedEnergyIndicator
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                                      owl:someValuesFrom rso:ConsumedSelfGeneratedEnergy
+                                                                                    ]
+                                                                                  ) ;
+                                                               rdf:type owl:Class
+                                                             ] ;
+                                         rdfs:comment "Indicator that measures the consumed from self generated energy subtopic."@en ;
+                                         rdfs:label "Consumed Self Generated Energy Indicator"@en ;
+                                         skos:prefLabel "Consumed Self Generated Energy Indicator"@en .
+
+
 ###  https://www.blinded-for-review/rso#CoreEnvironmentTopic
 rso:CoreEnvironmentTopic rdf:type owl:Class ;
                          rdfs:subClassOf rso:CoreTopic ;
@@ -486,6 +1159,32 @@ rso:CorporateGovernanceIndicator rdf:type owl:Class ;
                                  rdfs:comment "Indicators measure the corporate governance dimension of sustainability."@en ;
                                  rdfs:label "Corporate governance indicator"@en ;
                                  skos:prefLabel "Corporate governance indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#DirectGHGEmission
+rso:DirectGHGEmission rdf:type owl:Class ;
+                      rdfs:subClassOf rso:GHGEmission ;
+                      owl:disjointWith rso:IndirectGHGEmission ;
+                      rdfs:comment "Scope 1 GHG emissions, greenhouse gas (GHG) emissions from sources that are owned or controlled by the organization."@en ;
+                      rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+                      rdfs:label "Direct GHG Emission"@en ;
+                      skos:prefLabel "Direct GHG Emission"@en .
+
+
+###  https://www.blinded-for-review/rso#DirectGHGEmissionIndicator
+rso:DirectGHGEmissionIndicator rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( rso:GHGEmissionIndicator
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty rso:hasMeasurementVariable ;
+                                                                            owl:someValuesFrom rso:DirectGHGEmission
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               owl:disjointWith rso:IndirectGHGEmissionIndicator ;
+                               rdfs:comment "Indicator that measures the direct GHG (scope 1) emission subtopic."@en ;
+                               rdfs:label "Direct GHG Emission Indicator" ;
+                               skos:prefLabel "Direct GHG Emission Indicator" .
 
 
 ###  https://www.blinded-for-review/rso#Disclosure
@@ -586,6 +1285,32 @@ rso:ESRSUniversalStandard rdf:type owl:Class ;
                           skos:prefLabel "ESRS Universal Standard"@en .
 
 
+###  https://www.blinded-for-review/rso#ElectricityIndirectGHGEmission
+rso:ElectricityIndirectGHGEmission rdf:type owl:Class ;
+                                   rdfs:subClassOf rso:IndirectGHGEmission ;
+                                   owl:disjointWith rso:OtherIndirectGHGEmission ;
+                                   rdfs:comment "Scope 2 GHG emissions, greenhouse gas (GHG) emissions that result from the generation of purchased or acquired electricity, heating, cooling, and steam consumed by the organization."@en ;
+                                   rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+                                   rdfs:label "Electricity indirect GHG emission"@en ;
+                                   skos:prefLabel "Electricity indirect GHG emission"@en .
+
+
+###  https://www.blinded-for-review/rso#ElectricityIndirectGHGEmissionIndicator
+rso:ElectricityIndirectGHGEmissionIndicator rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( rso:IndirectGHGEmissionIndicator
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty rso:hasMeasurementVariable ;
+                                                                                         owl:someValuesFrom rso:ElectricityIndirectGHGEmission
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            owl:disjointWith rso:OtherIndirectGHGEmissionIndicator ;
+                                            rdfs:comment "Indicator that measures the electricity indirect GHG (scope 2) emission subtopic."@en ;
+                                            rdfs:label "Electricity Indirect GHG Emission Indicator"@en ;
+                                            skos:prefLabel "Electricity Indirect GHG Emission Indicator"@en .
+
+
 ###  https://www.blinded-for-review/rso#Emission
 rso:Emission rdf:type owl:Class ;
              rdfs:subClassOf rso:Variable ;
@@ -645,6 +1370,30 @@ rso:EnvironmentalIndicator rdf:type owl:Class ;
                            rdfs:comment "Indicators that measure the environmen dimension of sustainability."@en ;
                            rdfs:label "Environmental Indicator"@en ;
                            skos:prefLabel "Environmental Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#GHGEmission
+rso:GHGEmission rdf:type owl:Class ;
+                rdfs:subClassOf rso:Emission ;
+                rdfs:comment "Gas that contributes to the greenhouse effect by absorbing infrared radiation."@en ;
+                rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+                rdfs:label "GHG Emission"@en ;
+                skos:prefLabel "GHG Emission"@en .
+
+
+###  https://www.blinded-for-review/rso#GHGEmissionIndicator
+rso:GHGEmissionIndicator rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( rso:EmissionIndicator
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                      owl:someValuesFrom rso:GHGEmission
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:comment "Indicator that measures the Green House Gas emissions subtopic."@en ;
+                         rdfs:label "GHG Emission Indicator"@en ;
+                         skos:prefLabel "GHG Emission Indicator" .
 
 
 ###  https://www.blinded-for-review/rso#GRIDisclosure
@@ -725,11 +1474,291 @@ GRI 3: Material Topics 2021 provides guidance on how to determine material topic
                          skos:prefLabel "GRI Universal Standard"@en .
 
 
+###  https://www.blinded-for-review/rso#HAP
+rso:HAP rdf:type owl:Class ;
+        rdfs:subClassOf rso:OtherAirEmission ;
+        rdfs:comment "Variables (measurement objects) regarding HAP."@en ;
+        rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+        rdfs:label "Hazardous air pollutants (HAP)"@en ;
+        skos:prefLabel "Hazardous air pollutants (HAP)"@en .
+
+
+###  https://www.blinded-for-review/rso#HAPIndicator
+rso:HAPIndicator rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( rso:OtherEmissionIndicator
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty rso:hasMeasurementVariable ;
+                                                              owl:someValuesFrom rso:HAP
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:comment "Indicator that measures Hazardous air pollutants (HAP) subtopic."@en ;
+                 rdfs:label "Hazardous air pollutants (HAP) Indicator"@en ;
+                 skos:prefLabel "Hazardous air pollutants (HAP) Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDFDIndicator
+rso:HazardousWasteDFDIndicator rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( rso:WasteDFDIndicator
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty rso:hasMeasurementVariable ;
+                                                                            owl:someValuesFrom rso:HazardousWasteDivertedFromDisposal
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:comment "Indicator that measures the hazardous waste diverted from disposal subtopic."@en ;
+                               rdfs:label "Hazardous Diverted From Disposal Waste Inidicator"@en ;
+                               skos:prefLabel "Hazardous Diverted From Disposal Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDFDbyOtherRecoveryOptionsIndicator
+rso:HazardousWasteDFDbyOtherRecoveryOptionsIndicator rdf:type owl:Class ;
+                                                     owl:equivalentClass [ owl:intersectionOf ( rso:HazardousWasteDFDIndicator
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                  owl:someValuesFrom rso:HazardousWasteWasteDFDbyOtherRecoveryOptions
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ] ;
+                                                     rdfs:comment "Indicator that measures the hazardous waste diverted from disposal by other recovery options subtopic."@en ;
+                                                     rdfs:label "Hazardous Diverted From Disposal by Other Recovery Options Waste Indicator"@en ;
+                                                     skos:prefLabel "Hazardous Diverted From Disposal by Other Recovery Options Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDFDbyPreparationForReuseIndicator
+rso:HazardousWasteDFDbyPreparationForReuseIndicator rdf:type owl:Class ;
+                                                    owl:equivalentClass [ owl:intersectionOf ( rso:HazardousWasteDFDIndicator
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                 owl:someValuesFrom rso:HazardousWasteWasteDFDbyPreparationForReuse
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ] ;
+                                                    rdfs:comment "Indicator that measures the hazardous waste diverted from disposal by preperation for reuse subtopic."@en ;
+                                                    rdfs:label "Hazardous Diverted From Disposal by Preparation For Reuse Waste Indicator"@en ;
+                                                    skos:prefLabel "Hazardous Diverted From Disposal by Preparation For Reuse Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDFDbyRecyclingIndicator
+rso:HazardousWasteDFDbyRecyclingIndicator rdf:type owl:Class ;
+                                          owl:equivalentClass [ owl:intersectionOf ( rso:HazardousWasteDFDIndicator
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty rso:hasMeasurementVariable ;
+                                                                                       owl:someValuesFrom rso:HazardousWasteWasteDFDbyRecycling
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ] ;
+                                          rdfs:comment "Indicator that measures the hazardous waste diverted from disposal by recycling subtopic."@en ;
+                                          rdfs:label "Hazardous Diverted From Disposal by Recycling Waste Indicator"@en ;
+                                          skos:prefLabel "Hazardous Diverted From Disposal by Recycling Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDTDIndicator
+rso:HazardousWasteDTDIndicator rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( rso:WasteDTDIndicator
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty rso:hasMeasurementVariable ;
+                                                                            owl:someValuesFrom rso:HazardousWasteDirectedToDisposal
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:comment "Indicator that measures the hazardous waste directed to disposal subtopic."@en ;
+                               rdfs:label "Hazardous Directed To Disposal Waste Inidicator"@en ;
+                               skos:prefLabel "Hazardous Directed To Disposal Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDTDbyIncinerationIndicator
+rso:HazardousWasteDTDbyIncinerationIndicator rdf:type owl:Class ;
+                                             owl:equivalentClass [ owl:intersectionOf ( rso:HazardousWasteDTDIndicator
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty rso:hasMeasurementVariable ;
+                                                                                          owl:someValuesFrom rso:HazardousWasteWasteDTDbyIncineration
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                             rdfs:comment "Indicator that measures the hazardous waste directed to disposal by incineration subtopic."@en ;
+                                             rdfs:label "Hazardous Directed To Disposal by Incineration Waste Inidicator"@en ;
+                                             skos:prefLabel "Hazardous Directed To Disposal by Incineration Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDTDbyIncinerationWithEnergyRecoveryIndicator
+rso:HazardousWasteDTDbyIncinerationWithEnergyRecoveryIndicator rdf:type owl:Class ;
+                                                               owl:equivalentClass [ owl:intersectionOf ( rso:HazardousWasteDTDbyIncinerationIndicator
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                            owl:someValuesFrom rso:HazardousWasteWasteDTDbyIncinerationWithEnergyRecovery
+                                                                                                          ]
+                                                                                                        ) ;
+                                                                                     rdf:type owl:Class
+                                                                                   ] ;
+                                                               rdfs:comment "Indicator that measures the hazardous waste directed to disposal by incineration with energy recovery subtopic."@en ;
+                                                               rdfs:label "Hazardous Directed To Disposal by Incineration With Energy Recovery Waste Indicator"@en ;
+                                                               skos:prefLabel "Hazardous Directed To Disposal by Incineration With Energy Recovery Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDTDbyIncinerationWithoutEnergyRecoveryIndicator
+rso:HazardousWasteDTDbyIncinerationWithoutEnergyRecoveryIndicator rdf:type owl:Class ;
+                                                                  owl:equivalentClass [ owl:intersectionOf ( rso:HazardousWasteDTDbyIncinerationIndicator
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                               owl:someValuesFrom rso:HazardousWasteWasteDTDbyIncinerationWithoutEnergyRecovery
+                                                                                                             ]
+                                                                                                           ) ;
+                                                                                        rdf:type owl:Class
+                                                                                      ] ;
+                                                                  rdfs:comment "Indicator that measures the hazardous waste directed to disposal by incineration without energy recovery subtopic."@en ;
+                                                                  rdfs:label "Hazardous Directed To Disposal by Incineration Without Energy Recovery Waste Indicator"@en ;
+                                                                  skos:prefLabel "Hazardous Directed To Disposal by Incineration Without Energy Recovery Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDTDbyLandfillingIndicator
+rso:HazardousWasteDTDbyLandfillingIndicator rdf:type owl:Class ;
+                                            owl:equivalentClass [ owl:intersectionOf ( rso:HazardousWasteDTDIndicator
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty rso:hasMeasurementVariable ;
+                                                                                         owl:someValuesFrom rso:HazardousWasteWasteDTDbyLandfilling
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                            rdfs:comment "Indicator that measures the hazardous waste directed to disposal by landfilling subtopic."@en ;
+                                            rdfs:label "Hazardous Directed To Disposal by Landfilling Waste Inidicator"@en ;
+                                            skos:prefLabel "Hazardous Directed To Disposal by Landfilling Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDTDbyOtherDisposalOperationsIndicator
+rso:HazardousWasteDTDbyOtherDisposalOperationsIndicator rdf:type owl:Class ;
+                                                        owl:equivalentClass [ owl:intersectionOf ( rso:HazardousWasteDTDIndicator
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                     owl:someValuesFrom rso:HazardousWasteWasteDTDbyOtherDisposalOperations
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ;
+                                                        rdfs:comment "Indicator that measures the hazardous waste directed to disposal by other disposal operations subtopic."@en ;
+                                                        rdfs:label "Hazardous Directed To Disposal by Other Disposal Operations Waste Inidicator"@en ;
+                                                        skos:prefLabel "Hazardous Directed To Disposal by Other Disposal Operations Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDirectedToDisposal
+rso:HazardousWasteDirectedToDisposal rdf:type owl:Class ;
+                                     rdfs:subClassOf rso:WasteDirectedToDisposal ;
+                                     owl:disjointWith rso:NonHazardousWasteDirectedToDisposal ;
+                                     rdfs:comment "Variables (measurement objects) regarding hazaardous waste directed to disposal."@en ;
+                                     rdfs:label "Hazardous Waste Directed To Disposal"@en ;
+                                     skos:prefLabel "Hazardous Waste Directed To Disposal"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteDivertedFromDisposal
+rso:HazardousWasteDivertedFromDisposal rdf:type owl:Class ;
+                                       rdfs:subClassOf rso:WasteDivertedFromDisposal ;
+                                       owl:disjointWith rso:NonHazardousWasteDivertedFromDisposal ;
+                                       rdfs:comment "Variables (measurement objects) regarding hazardous waste diverted from disposal."@en ;
+                                       rdfs:label "Hazardous Waste Diverted From Disposal"@en ;
+                                       skos:prefLabel "Hazardous Waste Diverted From Disposal"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteWasteDFDbyOtherRecoveryOptions
+rso:HazardousWasteWasteDFDbyOtherRecoveryOptions rdf:type owl:Class ;
+                                                 rdfs:subClassOf rso:HazardousWasteDivertedFromDisposal ;
+                                                 rdfs:comment "Variables (measurement objects) regarding hazardous waste diverted from disposal by other recovery options."@en ;
+                                                 rdfs:label "Hazardous Waste Diverted From Disposal by Other Recovery Options"@en ;
+                                                 skos:prefLabel "Hazardous Waste Diverted From Disposal by Other Recovery Options"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteWasteDFDbyPreparationForReuse
+rso:HazardousWasteWasteDFDbyPreparationForReuse rdf:type owl:Class ;
+                                                rdfs:subClassOf rso:HazardousWasteDivertedFromDisposal ;
+                                                rdfs:comment "Variables (measurement objects) regarding hazardous waste diverted from disposal by preparation for reuse."@en ;
+                                                rdfs:label "Hazardous Waste Diverted From Disposal by Preparation For Reuse"@en ;
+                                                skos:prefLabel "Hazardous Waste Diverted From Disposal by Preparation For Reuse"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteWasteDFDbyRecycling
+rso:HazardousWasteWasteDFDbyRecycling rdf:type owl:Class ;
+                                      rdfs:subClassOf rso:HazardousWasteDivertedFromDisposal ;
+                                      rdfs:comment "Variables (measurement objects) regarding hazardous waste diverted from disposal by recycling, in which reprocessing of products or components of products that have become waste, to make new materials."@en ;
+                                      rdfs:label "Hazardous Waste Diverted From Disposal by Recycling"@en ;
+                                      skos:prefLabel "Hazardous Waste Diverted From Disposal by Recycling"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteWasteDTDbyIncineration
+rso:HazardousWasteWasteDTDbyIncineration rdf:type owl:Class ;
+                                         rdfs:subClassOf rso:HazardousWasteDirectedToDisposal ;
+                                         rdfs:comment "Variables (measurement objects) regarding hazaardous waste directed to disposal by incineration, in which controlled burning of waste at high temperatures."@en ;
+                                         rdfs:label "Hazardous Waste Directed To Disposal by Incineration"@en ;
+                                         skos:prefLabel "Hazardous Waste Directed To Disposal by Incineration"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteWasteDTDbyIncinerationWithEnergyRecovery
+rso:HazardousWasteWasteDTDbyIncinerationWithEnergyRecovery rdf:type owl:Class ;
+                                                           rdfs:subClassOf rso:HazardousWasteWasteDTDbyIncineration ;
+                                                           rdfs:comment "Variables (measurement objects) regarding hazaardous waste directed to disposal by incineration with energy recovery."@en ;
+                                                           rdfs:label "Hazardous Waste Directed To Disposal by Incineration With Energy Recovery"@en ;
+                                                           skos:prefLabel "Hazardous Waste Directed To Disposal by Incineration With Energy Recovery"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteWasteDTDbyIncinerationWithoutEnergyRecovery
+rso:HazardousWasteWasteDTDbyIncinerationWithoutEnergyRecovery rdf:type owl:Class ;
+                                                              rdfs:subClassOf rso:HazardousWasteWasteDTDbyIncineration ;
+                                                              rdfs:comment "Variables (measurement objects) regarding hazaardous waste directed to disposal by incineration without energy recovery."@en ;
+                                                              rdfs:label "Hazardous Waste Directed To Disposal by Incineration Without Energy Recovery"@en ;
+                                                              skos:prefLabel "Hazardous Waste Directed To Disposal by Incineration Without Energy Recovery"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteWasteDTDbyLandfilling
+rso:HazardousWasteWasteDTDbyLandfilling rdf:type owl:Class ;
+                                        rdfs:subClassOf rso:HazardousWasteDirectedToDisposal ;
+                                        rdfs:comment "Variables (measurement objects) regarding hazaardous waste directed to disposal by landfilling, in which final depositing of solid waste at, below, or above ground level at engineered disposal sites."@en ;
+                                        rdfs:label "Hazardous Waste Directed To Disposal by Landfilling"@en ;
+                                        skos:prefLabel "Hazardous Waste Directed To Disposal by Landfilling"@en .
+
+
+###  https://www.blinded-for-review/rso#HazardousWasteWasteDTDbyOtherDisposalOperations
+rso:HazardousWasteWasteDTDbyOtherDisposalOperations rdf:type owl:Class ;
+                                                    rdfs:subClassOf rso:HazardousWasteDirectedToDisposal ;
+                                                    rdfs:comment "Variables (measurement objects) regarding hazaardous waste directed to disposal by other disposal operations."@en ;
+                                                    rdfs:label "Hazardous Waste Directed To Disposal by Other Disposal Operations"@en ;
+                                                    skos:prefLabel "Hazardous Waste Directed To Disposal by Other Disposal Operations"@en .
+
+
 ###  https://www.blinded-for-review/rso#Indicator
 rso:Indicator rdf:type owl:Class ;
               rdfs:comment "A single measure from which conclusions on the phenomenon of interest can be inferred."@en ;
               rdfs:label "Sustainability Indicator"@en ;
               skos:prefLabel "Sustainability Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#IndirectGHGEmission
+rso:IndirectGHGEmission rdf:type owl:Class ;
+                        rdfs:subClassOf rso:GHGEmission ;
+                        rdfs:comment "Scope 2 and Scope 3 emissions."@en ;
+                        rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+                        rdfs:label "Indirect GHG Emission"@en ;
+                        skos:prefLabel "Indirect GHG Emission"@en .
+
+
+###  https://www.blinded-for-review/rso#IndirectGHGEmissionIndicator
+rso:IndirectGHGEmissionIndicator rdf:type owl:Class ;
+                                 owl:equivalentClass [ owl:intersectionOf ( rso:GHGEmissionIndicator
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty rso:hasMeasurementVariable ;
+                                                                              owl:someValuesFrom rso:IndirectGHGEmission
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                 rdfs:comment "Indicator that measures the indirect GHG emission subtopic."@en ;
+                                 rdfs:label "Indirect GHG Emission Indicator" ;
+                                 skos:prefLabel "Indirect GHG Emission Indicator" .
 
 
 ###  https://www.blinded-for-review/rso#IntensityIndicator
@@ -763,12 +1792,530 @@ rso:MaterialIndicator rdf:type owl:Class ;
                       skos:prefLabel "Material Indicator"@en .
 
 
+###  https://www.blinded-for-review/rso#NOx
+rso:NOx rdf:type owl:Class ;
+        rdfs:subClassOf rso:OtherAirEmission ;
+        rdfs:comment "Variables (measurement objects) regarding NOx."@en ;
+        rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+        rdfs:label "NOx"@en ;
+        skos:prefLabel "NOx"@en .
+
+
+###  https://www.blinded-for-review/rso#NOxIndicator
+rso:NOxIndicator rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( rso:OtherEmissionIndicator
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty rso:hasMeasurementVariable ;
+                                                              owl:someValuesFrom rso:NOx
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:comment "Indicator that measures NOx subtopic."@en ;
+                 rdfs:label "NOx Emission Indicator"@en ;
+                 skos:prefLabel "NOx Emission Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDFDIndicator
+rso:NonHazardousWasteDFDIndicator rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( rso:WasteDFDIndicator
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty rso:hasMeasurementVariable ;
+                                                                               owl:someValuesFrom rso:NonHazardousWasteDivertedFromDisposal
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:comment "Indicator that measures the non-hazardous waste diverted from disposal subtopic."@en ;
+                                  rdfs:label "Non-Hazardous Diverted From Disposal Waste Inidicator"@en ;
+                                  skos:prefLabel "Non-Hazardous Diverted From Disposal Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDFDbyOtherRecoveryOptionsIndicator
+rso:NonHazardousWasteDFDbyOtherRecoveryOptionsIndicator rdf:type owl:Class ;
+                                                        owl:equivalentClass [ owl:intersectionOf ( rso:NonHazardousWasteDFDIndicator
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                     owl:someValuesFrom rso:NonHazardousWasteWasteDFDbyOtherRecoveryOptions
+                                                                                                   ]
+                                                                                                 ) ;
+                                                                              rdf:type owl:Class
+                                                                            ] ;
+                                                        rdfs:comment "Indicator that measures the non-hazardous waste diverted from disposal by other recovery options subtopic."@en ;
+                                                        rdfs:label "Non-Hazardous Diverted From Disposal by Other Recovery Options Waste Indicator"@en ;
+                                                        skos:prefLabel "Non-Hazardous Diverted From Disposal by Other Recovery Options Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDFDbyPreparationForReuseIndicator
+rso:NonHazardousWasteDFDbyPreparationForReuseIndicator rdf:type owl:Class ;
+                                                       owl:equivalentClass [ owl:intersectionOf ( rso:NonHazardousWasteDFDIndicator
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                    owl:someValuesFrom rso:NonHazardousWasteWasteDFDbyPreparationForReuse
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ] ;
+                                                       rdfs:comment "Indicator that measures the non-hazardous waste diverted from disposal by preparation for reuse subtopic."@en ;
+                                                       rdfs:label "Non-Hazardous Diverted From Disposal by Preparation For Reuse Waste Indicator"@en ;
+                                                       skos:prefLabel "Non-Hazardous Diverted From Disposal by Preparation For Reuse Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDFDbyRecyclingIndicator
+rso:NonHazardousWasteDFDbyRecyclingIndicator rdf:type owl:Class ;
+                                             owl:equivalentClass [ owl:intersectionOf ( rso:NonHazardousWasteDFDIndicator
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty rso:hasMeasurementVariable ;
+                                                                                          owl:someValuesFrom rso:NonHazardousWasteWasteDFDbyRecycling
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                             rdfs:comment "Indicator that measures the non-hazardous waste diverted from disposal by recycling subtopic."@en ;
+                                             rdfs:label "Non-Hazardous Diverted From Disposal by Recycling Waste Indicator"@en ;
+                                             skos:prefLabel "Non-Hazardous Diverted From Disposal by Recycling Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDTDIndicator
+rso:NonHazardousWasteDTDIndicator rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( rso:WasteDTDIndicator
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty rso:hasMeasurementVariable ;
+                                                                               owl:someValuesFrom rso:NonHazardousWasteDirectedToDisposal
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  rdfs:comment "Indicator that measures the non-hazardous waste directed to disposal subtopic."@en ;
+                                  rdfs:label "Non-Hazardous Directed To Disposal Waste Inidicator"@en ;
+                                  skos:prefLabel "Non-Hazardous Directed To Disposal Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDTDbyIncinerationIndicator
+rso:NonHazardousWasteDTDbyIncinerationIndicator rdf:type owl:Class ;
+                                                owl:equivalentClass [ owl:intersectionOf ( rso:NonHazardousWasteDTDIndicator
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty rso:hasMeasurementVariable ;
+                                                                                             owl:someValuesFrom rso:NonHazardousWasteWasteDTDbyIncineration
+                                                                                           ]
+                                                                                         ) ;
+                                                                      rdf:type owl:Class
+                                                                    ] ;
+                                                rdfs:comment "Indicator that measures the non-hazardous waste directed to disposal by incineration subtopic."@en ;
+                                                rdfs:label "Non-Hazardous Directed To Disposal by Incineration Waste Inidicator"@en ;
+                                                skos:prefLabel "Non-Hazardous Directed To Disposal by Incineration Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDTDbyIncinerationWithEnergyRecoveryIndicator
+rso:NonHazardousWasteDTDbyIncinerationWithEnergyRecoveryIndicator rdf:type owl:Class ;
+                                                                  owl:equivalentClass [ owl:intersectionOf ( rso:NonHazardousWasteDTDbyIncinerationIndicator
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                               owl:someValuesFrom rso:NonHazardousWasteWasteDTDbyIncinerationWithEnergyRecovery
+                                                                                                             ]
+                                                                                                           ) ;
+                                                                                        rdf:type owl:Class
+                                                                                      ] ;
+                                                                  rdfs:comment "Indicator that measures the non-hazardous waste directed to disposal by incineration with energy recovery subtopic."@en ;
+                                                                  rdfs:label "Non-Hazardous Directed To Disposal by Incineration With Energy Recovery Waste Indicator"@en ;
+                                                                  skos:prefLabel "Non-Hazardous Directed To Disposal by Incineration With Energy Recovery Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDTDbyIncinerationWithoutEnergyRecoveryIndicator
+rso:NonHazardousWasteDTDbyIncinerationWithoutEnergyRecoveryIndicator rdf:type owl:Class ;
+                                                                     owl:equivalentClass [ owl:intersectionOf ( rso:NonHazardousWasteDTDbyIncinerationIndicator
+                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                                  owl:someValuesFrom rso:NonHazardousWasteWasteDTDbyIncinerationWithoutEnergyRecovery
+                                                                                                                ]
+                                                                                                              ) ;
+                                                                                           rdf:type owl:Class
+                                                                                         ] ;
+                                                                     rdfs:comment "Indicator that measures the non-hazardous waste directed to disposal by incineration without energy recovery subtopic."@en ;
+                                                                     rdfs:label "Non-Hazardous Directed To Disposal by Incineration Without Energy Recovery Waste Indicator"@en ;
+                                                                     skos:prefLabel "Non-Hazardous Directed To Disposal by Incineration Without Energy Recovery Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDTDbyLandfillingIndicator
+rso:NonHazardousWasteDTDbyLandfillingIndicator rdf:type owl:Class ;
+                                               owl:equivalentClass [ owl:intersectionOf ( rso:NonHazardousWasteDTDIndicator
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty rso:hasMeasurementVariable ;
+                                                                                            owl:someValuesFrom rso:NonHazardousWasteWasteDTDbyLandfilling
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ;
+                                               rdfs:comment "Indicator that measures the non-hazardous waste directed to disposal by landfilling subtopic."@en ;
+                                               rdfs:label "Non-Hazardous Directed To Disposal by Landfilling Waste Inidicator"@en ;
+                                               skos:prefLabel "Non-Hazardous Directed To Disposal by Landfilling Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDTDbyOtherDisposalOperationsIndicator
+rso:NonHazardousWasteDTDbyOtherDisposalOperationsIndicator rdf:type owl:Class ;
+                                                           owl:equivalentClass [ owl:intersectionOf ( rso:NonHazardousWasteDTDIndicator
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty rso:hasMeasurementVariable ;
+                                                                                                        owl:someValuesFrom rso:NonHazardousWasteWasteDTDbyOtherDisposalOperations
+                                                                                                      ]
+                                                                                                    ) ;
+                                                                                 rdf:type owl:Class
+                                                                               ] ;
+                                                           rdfs:comment "Indicator that measures the non-hazardous waste directed to disposal by other disposal operations subtopic."@en ;
+                                                           rdfs:label "Non-Hazardous Directed To Disposal by Other Disposal Operations Waste Inidicator"@en ;
+                                                           skos:prefLabel "Non-Hazardous Directed To Disposal by Other Disposal Operations Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDirectedToDisposal
+rso:NonHazardousWasteDirectedToDisposal rdf:type owl:Class ;
+                                        rdfs:subClassOf rso:WasteDirectedToDisposal ;
+                                        rdfs:comment "Variables (measurement objects) regarding non-hazaardous waste directed to disposal."@en ;
+                                        rdfs:label "Non-Hazardous Waste Directed To Disposal"@en ;
+                                        skos:prefLabel "Non-Hazardous Waste Directed To Disposal"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteDivertedFromDisposal
+rso:NonHazardousWasteDivertedFromDisposal rdf:type owl:Class ;
+                                          rdfs:subClassOf rso:WasteDivertedFromDisposal ;
+                                          rdfs:comment "Variables (measurement objects) regarding non-hazardous waste diverted from disposal."@en ;
+                                          rdfs:label "Non-Hazardous Waste Diverted From Disposal"@en ;
+                                          skos:prefLabel "Non-Hazardous Waste Diverted From Disposal"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteWasteDFDbyOtherRecoveryOptions
+rso:NonHazardousWasteWasteDFDbyOtherRecoveryOptions rdf:type owl:Class ;
+                                                    rdfs:subClassOf rso:NonHazardousWasteDivertedFromDisposal ;
+                                                    rdfs:comment "Variables (measurement objects) regarding non-hazardous waste diverted from disposal by other recovery options."@en ;
+                                                    rdfs:label "Non-Hazardous Waste Diverted From Disposal by Other Recovery Options"@en ;
+                                                    skos:prefLabel "Non-Hazardous Waste Diverted From Disposal by Other Recovery Options"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteWasteDFDbyPreparationForReuse
+rso:NonHazardousWasteWasteDFDbyPreparationForReuse rdf:type owl:Class ;
+                                                   rdfs:subClassOf rso:NonHazardousWasteDivertedFromDisposal ;
+                                                   rdfs:comment "Variables (measurement objects) regarding non-hazardous waste diverted from disposal by preparation for reuse."@en ;
+                                                   rdfs:label "Non-Hazardous Waste Diverted From Disposal by Preparation For Reuse"@en ;
+                                                   skos:prefLabel "Non-Hazardous Waste Diverted From Disposal by Preparation For Reuse"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteWasteDFDbyRecycling
+rso:NonHazardousWasteWasteDFDbyRecycling rdf:type owl:Class ;
+                                         rdfs:subClassOf rso:NonHazardousWasteDivertedFromDisposal ;
+                                         rdfs:comment "Variables (measurement objects) regarding non-hazardous waste diverted from disposal by recycling, in which reprocessing of products or components of products that have become waste, to make new materials."@en ;
+                                         rdfs:label "Non-Hazardous Waste Diverted From Disposal by Recycling"@en ;
+                                         skos:prefLabel "Non-Hazardous Waste Diverted From Disposal by Recycling"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteWasteDTDbyIncineration
+rso:NonHazardousWasteWasteDTDbyIncineration rdf:type owl:Class ;
+                                            rdfs:subClassOf rso:NonHazardousWasteDirectedToDisposal ;
+                                            rdfs:comment "Variables (measurement objects) regarding non-hazaardous waste directed to disposal by incineration, in which controlled burning of waste at high temperatures."@en ;
+                                            rdfs:label "Non-Hazardous Waste Directed To Disposal by Incineration"@en ;
+                                            skos:prefLabel "Non-Hazardous Waste Directed To Disposal by Incineration"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteWasteDTDbyIncinerationWithEnergyRecovery
+rso:NonHazardousWasteWasteDTDbyIncinerationWithEnergyRecovery rdf:type owl:Class ;
+                                                              rdfs:subClassOf rso:NonHazardousWasteWasteDTDbyIncineration ;
+                                                              rdfs:comment "Variables (measurement objects) regarding non-hazaardous waste directed to disposal by incineration with energy recovery."@en ;
+                                                              rdfs:label "Non-Hazardous Waste Directed To Disposal by Incineration With Energy Recovery"@en ;
+                                                              skos:prefLabel "Non-Hazardous Waste Directed To Disposal by Incineration With Energy Recovery"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteWasteDTDbyIncinerationWithoutEnergyRecovery
+rso:NonHazardousWasteWasteDTDbyIncinerationWithoutEnergyRecovery rdf:type owl:Class ;
+                                                                 rdfs:subClassOf rso:NonHazardousWasteWasteDTDbyIncineration ;
+                                                                 rdfs:comment "Variables (measurement objects) regarding non-hazaardous waste directed to disposal by incineration without energy recovery."@en ;
+                                                                 rdfs:label "Non-Hazardous Waste Directed To Disposal by Incineration Without Energy Recovery"@en ;
+                                                                 skos:prefLabel "Non-Hazardous Waste Directed To Disposal by Incineration Without Energy Recovery"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteWasteDTDbyLandfilling
+rso:NonHazardousWasteWasteDTDbyLandfilling rdf:type owl:Class ;
+                                           rdfs:subClassOf rso:NonHazardousWasteDirectedToDisposal ;
+                                           rdfs:comment "Variables (measurement objects) regarding non-hazaardous waste directed to disposal by landfilling, in which final depositing of solid waste at, below, or above ground level at engineered disposal sites."@en ;
+                                           rdfs:label "Non-Hazardous Waste Directed To Disposal by Landfilling"@en ;
+                                           skos:prefLabel "Non-Hazardous Waste Directed To Disposal by Landfilling"@en .
+
+
+###  https://www.blinded-for-review/rso#NonHazardousWasteWasteDTDbyOtherDisposalOperations
+rso:NonHazardousWasteWasteDTDbyOtherDisposalOperations rdf:type owl:Class ;
+                                                       rdfs:subClassOf rso:NonHazardousWasteDirectedToDisposal ;
+                                                       rdfs:comment "Variables (measurement objects) regarding non-hazaardous waste directed to disposal by other disposal operations."@en ;
+                                                       rdfs:label "Non-Hazardous Waste Directed To Disposal by Other Disposal Operations"@en ;
+                                                       skos:prefLabel "Non-Hazardous Waste Directed To Disposal by Other Disposal Operations"@en .
+
+
+###  https://www.blinded-for-review/rso#NonRecycledWaste
+rso:NonRecycledWaste rdf:type owl:Class ;
+                     rdfs:subClassOf rso:Waste ;
+                     rdfs:comment "Variables (measurement objects) regarding non-recyled waste."@en ;
+                     rdfs:label "Nonrecycled Waste"@en ;
+                     skos:prefLabel "Nonrecycled Waste"@en .
+
+
+###  https://www.blinded-for-review/rso#NonRecycledWasteIndicator
+rso:NonRecycledWasteIndicator rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( rso:WasteIndicator
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty rso:hasMeasurementVariable ;
+                                                                           owl:someValuesFrom rso:NonRecycledWaste
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:comment "Indicator that measures the non-recycled waste subtopic."@en ;
+                              rdfs:label "Non-Recycled Waste Indicator"@en ;
+                              skos:prefLabel "Non-Recycled Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#NonRenewableMaterial
+rso:NonRenewableMaterial rdf:type owl:Class ;
+                         rdfs:subClassOf rso:Material ;
+                         owl:disjointWith rso:RenewableMaterial ;
+                         rdfs:comment "Resource that does not renew in short time periods."@en ;
+                         rdfs:isDefinedBy "https://www.globalreporting.org/pdf.ashx?id=12456" ;
+                         rdfs:label "Nonrenewable Material"@en ;
+                         skos:prefLabel "Nonrenewable Material"@en .
+
+
+###  https://www.blinded-for-review/rso#NonRenewableMaterialIndicator
+rso:NonRenewableMaterialIndicator rdf:type owl:Class ;
+                                  owl:equivalentClass [ owl:intersectionOf ( rso:MaterialIndicator
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty rso:hasMeasurementVariable ;
+                                                                               owl:someValuesFrom rso:NonRenewableMaterial
+                                                                             ]
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ] ;
+                                  owl:disjointWith rso:RenewableMaterialIndicator ;
+                                  rdfs:comment "Indicator that measures the non-renewable materials subtopic."@en ;
+                                  rdfs:label "Non-Renewable Material Indicator"@en ;
+                                  skos:prefLabel "Non-Renewable Material Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ODSEmission
+rso:ODSEmission rdf:type owl:Class ;
+                rdfs:subClassOf rso:Emission ;
+                rdfs:comment """Substance with an ozone depletion potential (ODP) greater than 0 that can deplete the
+stratospheric ozone layer."""@en ;
+                rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+                rdfs:label "ODS Emission"@en ;
+                skos:prefLabel "ODS Emission"@en .
+
+
+###  https://www.blinded-for-review/rso#ODSEmissionIndicator
+rso:ODSEmissionIndicator rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( rso:EmissionIndicator
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                      owl:someValuesFrom rso:ODSEmission
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:comment "Indicator that measures the Ozone-Depleting Substances subtopic."@en ;
+                         rdfs:label "ODS Emission Indicator" ;
+                         skos:prefLabel "ODS Emission Indicator" .
+
+
+###  https://www.blinded-for-review/rso#OtherAirEmission
+rso:OtherAirEmission rdf:type owl:Class ;
+                     rdfs:subClassOf rso:Emission ;
+                     rdfs:comment "Nitrogen oxides (NOx), sulfur oxides (SOx), and other significant air emissions."@en ;
+                     rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+                     rdfs:label "Other standard categories of air emissions identified in relevant regulations"@en ;
+                     skos:prefLabel "Other standard categories of air emissions identified in relevant regulations"@en .
+
+
+###  https://www.blinded-for-review/rso#OtherEmissionIndicator
+rso:OtherEmissionIndicator rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( rso:EmissionIndicator
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty rso:hasMeasurementVariable ;
+                                                                        owl:someValuesFrom rso:OtherAirEmission
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:comment "Indicator that measures other significant air emissions subtopic."@en ;
+                           rdfs:label "Other Emission Indicator" ;
+                           skos:prefLabel "Other Emission Indicator" .
+
+
+###  https://www.blinded-for-review/rso#OtherIndirectGHGEmission
+rso:OtherIndirectGHGEmission rdf:type owl:Class ;
+                             rdfs:subClassOf rso:IndirectGHGEmission ;
+                             rdfs:comment "Scope 3 GHG emissions, indirect greenhouse gas (GHG) emissions not included in energy indirect (Scope 2) GHG emissions that occur outside of the organization, including both upstream and downstream emissions."@en ;
+                             rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+                             rdfs:label "Other indirect GHG emission"@en ;
+                             skos:prefLabel "Other indirect GHG emission"@en .
+
+
+###  https://www.blinded-for-review/rso#OtherIndirectGHGEmissionIndicator
+rso:OtherIndirectGHGEmissionIndicator rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( rso:IndirectGHGEmissionIndicator
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty rso:hasMeasurementVariable ;
+                                                                                   owl:someValuesFrom rso:OtherIndirectGHGEmission
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:comment "Indicator that measures other indirect GHG (scope 3) emission subtopic."@en ;
+                                      rdfs:label "Other Indirect GHG Emission Indicator"@en ;
+                                      skos:prefLabel "Other Indirect GHG Emission Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#PM
+rso:PM rdf:type owl:Class ;
+       rdfs:subClassOf rso:OtherAirEmission ;
+       rdfs:comment "Variables (measurement objects) regarding PM."@en ;
+       rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+       rdfs:label "Particulate matter (PM)"@en ;
+       skos:prefLabel "Particulate matter (PM)"@en .
+
+
+###  https://www.blinded-for-review/rso#PMIndicator
+rso:PMIndicator rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( rso:OtherEmissionIndicator
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty rso:hasMeasurementVariable ;
+                                                             owl:someValuesFrom rso:PM
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:comment "Indicator that measures Particulate matter (PM) subtopic."@en ;
+                rdfs:label "Particulate matter (PM) Indicator"@en ;
+                skos:prefLabel "Particulate matter (PM) Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#POP
+rso:POP rdf:type owl:Class ;
+        rdfs:subClassOf rso:OtherAirEmission ;
+        rdfs:comment "Variables (measurement objects) regarding POP."@en ;
+        rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+        rdfs:label "Persistent organic pollutants (POP)"@en ;
+        skos:prefLabel "Persistent organic pollutants (POP)"@en .
+
+
+###  https://www.blinded-for-review/rso#POPIndicator
+rso:POPIndicator rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( rso:OtherEmissionIndicator
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty rso:hasMeasurementVariable ;
+                                                              owl:someValuesFrom rso:POP
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:comment "Indicator that measures Persistent organic pollutants (POP) subtopic."@en ;
+                 rdfs:label "Persistent organic pollutants (POP) Indicator"@en ;
+                 skos:prefLabel "Persistent organic pollutants (POP) Indicator"@en .
+
+
 ###  https://www.blinded-for-review/rso#PercentageIndicator
 rso:PercentageIndicator rdf:type owl:Class ;
                         rdfs:subClassOf rso:WeightedIndicator ;
                         rdfs:comment "A percentage indicator shares the same quantity kind on both numerator and denominator."@en ;
                         rdfs:label "Percentage Indicator"@en ;
                         skos:prefLabel "Percentage Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ProducedEnergy
+rso:ProducedEnergy rdf:type owl:Class ;
+                   rdfs:subClassOf rso:EnergyVariable ;
+                   rdfs:comment "Variables (measurement objects) regarding organizational produced energy."@en ;
+                   rdfs:label "Produced Energy"@en ;
+                   skos:prefLabel "Produced Energy"@en .
+
+
+###  https://www.blinded-for-review/rso#ProducedEnergyIndicator
+rso:ProducedEnergyIndicator rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( rso:EnergyIndicator
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty rso:hasMeasurementVariable ;
+                                                                         owl:someValuesFrom rso:ProducedEnergy
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:comment "Indicator that measures the produced energy subtopic."@en ;
+                            rdfs:label "Produced Energy Indicator"@en ;
+                            skos:prefLabel "Produced Energy Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ProducedNonRenewableEnergy
+rso:ProducedNonRenewableEnergy rdf:type owl:Class ;
+                               rdfs:subClassOf rso:ProducedEnergy ;
+                               owl:disjointWith rso:ProducedRenewableEnergy ;
+                               rdfs:comment "Variables (measurement objects) regarding organizational produced non-renewable energy."@en ;
+                               rdfs:label "Produced Nonrenewable Energy"@en ;
+                               skos:prefLabel "Produced Nonrenewable Energy"@en .
+
+
+###  https://www.blinded-for-review/rso#ProducedNonRenewableEnergyIndicator
+rso:ProducedNonRenewableEnergyIndicator rdf:type owl:Class ;
+                                        owl:equivalentClass [ owl:intersectionOf ( rso:ProducedEnergyIndicator
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty rso:hasMeasurementVariable ;
+                                                                                     owl:someValuesFrom rso:ProducedNonRenewableEnergy
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ] ;
+                                        rdfs:comment "Indicator that measures the produced non-renewable energy subtopic."@en ;
+                                        rdfs:label "Produced Non-Renewable Energy Indicator"@en ;
+                                        skos:prefLabel "Produced Non-Renewable Energy Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#ProducedRenewableEnergy
+rso:ProducedRenewableEnergy rdf:type owl:Class ;
+                            rdfs:subClassOf rso:ProducedEnergy ;
+                            rdfs:comment "Variables (measurement objects) regarding organizational produced renewable energy."@en ;
+                            rdfs:label "Produced Renewable Energy"@en ;
+                            skos:prefLabel "Produced Renewable Energy"@en .
+
+
+###  https://www.blinded-for-review/rso#ProducedRenewableEnergyIndicator
+rso:ProducedRenewableEnergyIndicator rdf:type owl:Class ;
+                                     owl:equivalentClass [ owl:intersectionOf ( rso:ProducedEnergyIndicator
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty rso:hasMeasurementVariable ;
+                                                                                  owl:someValuesFrom rso:ProducedRenewableEnergy
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                     rdfs:comment "Indicator that measures the produced renewable energy subtopic."@en ;
+                                     rdfs:label "Produced Renewable Energy Indicator"@en ;
+                                     skos:prefLabel "Produced Renewable Energy Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#RenewableMaterial
+rso:RenewableMaterial rdf:type owl:Class ;
+                      rdfs:subClassOf rso:Material ;
+                      rdfs:comment "Material that is derived from plentiful resources that are quickly replenished by ecological cycles or agricultural processes, so that the services provided by these and other linked resources are not endangered and remain available for the next generation."@en ;
+                      rdfs:isDefinedBy "https://www.globalreporting.org/pdf.ashx?id=12456" ;
+                      rdfs:label "Renewable Material"@en ;
+                      skos:prefLabel "Renewable Material"@en .
+
+
+###  https://www.blinded-for-review/rso#RenewableMaterialIndicator
+rso:RenewableMaterialIndicator rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( rso:MaterialIndicator
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty rso:hasMeasurementVariable ;
+                                                                            owl:someValuesFrom rso:RenewableMaterial
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:comment "Indicator that measures the renewable materials subtopic."@en ;
+                               rdfs:label "Renewable Material Indicator"@en ;
+                               skos:prefLabel "Renewable Material Indicator"@en .
 
 
 ###  https://www.blinded-for-review/rso#Report
@@ -786,6 +2333,30 @@ rso:ReportValue rdf:type owl:Class ;
                 skos:prefLabel "Sustainability Report Value"@en .
 
 
+###  https://www.blinded-for-review/rso#SOx
+rso:SOx rdf:type owl:Class ;
+        rdfs:subClassOf rso:OtherAirEmission ;
+        rdfs:comment "Variables (measurement objects) regarding SOx."@en ;
+        rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+        rdfs:label "SOx"@en ;
+        skos:prefLabel "SOx"@en .
+
+
+###  https://www.blinded-for-review/rso#SOxIndicator
+rso:SOxIndicator rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( rso:OtherEmissionIndicator
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty rso:hasMeasurementVariable ;
+                                                              owl:someValuesFrom rso:SOx
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:comment "Indicator that measures SOx subtopic."@en ;
+                 rdfs:label "SOx Emission Indicator"@en ;
+                 skos:prefLabel "SOx Emission Indicator"@en .
+
+
 ###  https://www.blinded-for-review/rso#SocialIndicator
 rso:SocialIndicator rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( rso:Indicator
@@ -799,6 +2370,121 @@ rso:SocialIndicator rdf:type owl:Class ;
                     rdfs:comment "Indicators measure the social dimension of sustainability."@en ;
                     rdfs:label "Social indicator"@en ;
                     skos:prefLabel "Social indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldCooling
+rso:SoldCooling rdf:type owl:Class ;
+                rdfs:subClassOf rso:SoldEnergy ;
+                rdfs:comment "Variables (measurement objects) regarding organizational sold cooling."@en ;
+                rdfs:label "Sold Cooling"@en ;
+                skos:prefLabel "Sold Cooling"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldCoolingIndicator
+rso:SoldCoolingIndicator rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( rso:SoldEnergyIndicator
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                      owl:someValuesFrom rso:SoldCooling
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:comment "Indicator that measures sold cooling subtopic."@en ;
+                         rdfs:label "Sold Cooling Indicator"@en ;
+                         skos:prefLabel "Sold Cooling Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldElectricity
+rso:SoldElectricity rdf:type owl:Class ;
+                    rdfs:subClassOf rso:SoldEnergy ;
+                    rdfs:comment "Variables (measurement objects) regarding organizational sold electricity."@en ;
+                    rdfs:label "Sold Electricity"@en ;
+                    skos:prefLabel "Sold Electricity"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldElectricityInidicator
+rso:SoldElectricityInidicator rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( rso:SoldEnergyIndicator
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty rso:hasMeasurementVariable ;
+                                                                           owl:someValuesFrom rso:SoldElectricity
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:comment "Indicator that measures sold electricity subtopic"@en ;
+                              rdfs:label "Sold Electricity Inidicator"@en ;
+                              skos:prefLabel "Sold Electricity Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldEnergy
+rso:SoldEnergy rdf:type owl:Class ;
+               rdfs:subClassOf rso:EnergyVariable ;
+               rdfs:comment "Variables (measurement objects) regarding sold energy by the organization."@en ;
+               rdfs:label "Sold Energy"@en ;
+               skos:prefLabel "Sold Energy"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldEnergyIndicator
+rso:SoldEnergyIndicator rdf:type owl:Class ;
+                        owl:equivalentClass [ owl:intersectionOf ( rso:EnergyIndicator
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty rso:hasMeasurementVariable ;
+                                                                     owl:someValuesFrom rso:SoldEnergy
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
+                        rdfs:comment "Indicator that measures the sold energy subtopic."@en ;
+                        rdfs:label "Sold Energy Indicator"@en ;
+                        skos:prefLabel "Sold Energy Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldHeating
+rso:SoldHeating rdf:type owl:Class ;
+                rdfs:subClassOf rso:SoldEnergy ;
+                rdfs:comment "Variables (measurement objects) regarding organizational sold heating."@en ;
+                rdfs:label "Sold Heating"@en ;
+                skos:prefLabel "Sold Heating"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldHeatingIndicator
+rso:SoldHeatingIndicator rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( rso:SoldEnergyIndicator
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty rso:hasMeasurementVariable ;
+                                                                      owl:someValuesFrom rso:SoldHeating
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:comment "Indicator that measures sold heating subtopic."@en ;
+                         rdfs:label "Sold Heating Indicator"@en ;
+                         skos:prefLabel "Sold Heating Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldSteam
+rso:SoldSteam rdf:type owl:Class ;
+              rdfs:subClassOf rso:SoldEnergy ;
+              rdfs:comment "Variables (measurement objects) regarding organizational sold steam."@en ;
+              rdfs:label "Sold Steam"@en ;
+              skos:prefLabel "Sold Steam"@en .
+
+
+###  https://www.blinded-for-review/rso#SoldSteamIndicator
+rso:SoldSteamIndicator rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( rso:SoldEnergyIndicator
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty rso:hasMeasurementVariable ;
+                                                                    owl:someValuesFrom rso:SoldSteam
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:comment "Indicator that measures sold steam subtopic."@en ;
+                       rdfs:label "Sold Steam Indicator"@en ;
+                       skos:prefLabel "Sold Steam Indicator"@en .
 
 
 ###  https://www.blinded-for-review/rso#Standard
@@ -823,6 +2509,30 @@ rso:Topic rdf:type owl:Class ;
           skos:prefLabel "Sustainability Topic"@en .
 
 
+###  https://www.blinded-for-review/rso#VOC
+rso:VOC rdf:type owl:Class ;
+        rdfs:subClassOf rso:OtherAirEmission ;
+        rdfs:comment "Variables (measurement objects) regarding VOC."@en ;
+        rdfs:isDefinedBy "https://www.globalreporting.org/publications/documents/english/gri-305-emissions-2016/" ;
+        rdfs:label "Volatile organic compounds (VOC)"@en ;
+        skos:prefLabel "Volatile organic compounds (VOC)"@en .
+
+
+###  https://www.blinded-for-review/rso#VOCIndicator
+rso:VOCIndicator rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( rso:OtherEmissionIndicator
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty rso:hasMeasurementVariable ;
+                                                              owl:someValuesFrom rso:VOC
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:comment "Indicator that measures Volatile organic compounds (VOC) subtopic"@en ;
+                 rdfs:label "Volatile organic compounds (VOC) indicator"@en ;
+                 skos:prefLabel "Volatile organic compounds (VOC) Indicator"@en .
+
+
 ###  https://www.blinded-for-review/rso#Value
 rso:Value rdf:type owl:Class ;
           rdfs:comment "This class acts as a collective framework for organizing quantitative data within sustainability reports. It encompasses two subclasses:(1) ReportValue, which structures individual data entries including numerical values and units linked to specific indicators, and (2) BreakdownValue, which allows for detailed disaggregation of data according to defined criteria, enhancing data analysis and reporting precision."@en ;
@@ -843,6 +2553,52 @@ rso:Waste rdf:type owl:Class ;
           rdfs:comment "A variable that quantifies waste metrics."@en ;
           rdfs:label "Waste"@en ;
           skos:prefLabel "Waste"@en .
+
+
+###  https://www.blinded-for-review/rso#WasteDFDIndicator
+rso:WasteDFDIndicator rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( rso:WasteIndicator
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty rso:hasMeasurementVariable ;
+                                                                   owl:someValuesFrom rso:WasteDivertedFromDisposal
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:comment "Indicator that measures the waste diverted from disposal subtopic."@en ;
+                      rdfs:label "Diverted From Disposal Waste Inidicator"@en ;
+                      skos:prefLabel "Diverted From Disposal Waste Inidicator"@en .
+
+
+###  https://www.blinded-for-review/rso#WasteDTDIndicator
+rso:WasteDTDIndicator rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( rso:WasteIndicator
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty rso:hasMeasurementVariable ;
+                                                                   owl:someValuesFrom rso:WasteDirectedToDisposal
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:comment "Indicator that measures the waste directed to disposal subtopic."@en ;
+                      rdfs:label "Directed To Disposal Waste Indicator"@en ;
+                      skos:prefLabel "Directed To Disposal Waste Indicator"@en .
+
+
+###  https://www.blinded-for-review/rso#WasteDirectedToDisposal
+rso:WasteDirectedToDisposal rdf:type owl:Class ;
+                            rdfs:subClassOf rso:Waste ;
+                            rdfs:comment "Variables (measurement objects) regarding waste directed to disposal."@en ;
+                            rdfs:label "Waste Directed To Disposal"@en ;
+                            skos:prefLabel "Waste Directed To Disposal"@en .
+
+
+###  https://www.blinded-for-review/rso#WasteDivertedFromDisposal
+rso:WasteDivertedFromDisposal rdf:type owl:Class ;
+                              rdfs:subClassOf rso:Waste ;
+                              rdfs:comment "Variables (measurement objects) regarding waste diverted from disposal."@en ;
+                              rdfs:label "Waste Diverted From Disposal"@en ;
+                              skos:prefLabel "Waste Diverted From Disposal"@en .
 
 
 ###  https://www.blinded-for-review/rso#WasteIndicator
@@ -949,4 +2705,4 @@ rso:optional rdf:type owl:NamedIndividual ,
 ] .
 
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
